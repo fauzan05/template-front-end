@@ -23,25 +23,120 @@
                     <i class="fa-solid fa-pepper-hot ms-2"></i>
                 </h1>
             </a>
-            <button class="navbar-toggler" type="submit">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" type="button">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto gap-2 py-0 pe-4">
+                <div class="navbar-nav ms-auto py-0 pe-4">
                     <a href="" class="nav-item nav-link underline">Home</a>
                     <a href="" class="nav-item nav-link">Menu</a>
-                    <a href="" class="nav-item nav-link">Service</a>
-                    <a href="" class="nav-item nav-link">About</a>
-                    <div href="" class="nav-item nav-link cursor-pointer" id="searchForm"><i class="fa-solid fa-magnifying-glass">
-                        <div class="search-form-wrapper cursor-pointer">
-                        <input class="search-form p-2" type="text" placeholder="Cari...">
-                    </div></i>
+                    <a href="" class="nav-item nav-link">Layanan</a>
+                    <a href="" class="nav-item nav-link">Tentang</a>
+                    <div class="nav-item nav-link" id="searchForm"><i
+                            class="fa-solid fa-magnifying-glass cursor-pointer">
+                            <div class="search-form-wrapper cursor-pointer">
+                                <input class="search-form p-2" type="text" placeholder="Cari...">
+                            </div>
+                        </i>
+                    </div>
+                    <div class="nav-item nav-link" id="notification"><i class="fa-solid fa-bell cursor-pointer"></i><a
+                            href="" class="text-decoration-none notification-text-collapse">Notifikasi</a>
+                        <span class="badge">5</span>
+                        <div class="notification-wrapper">
+                            <p class="text-start text-capitalize p-1">Notifikasi</p>
+                            <div class="notification-wrapper-inside">
+                                <a href="" class="notification cursor-pointer text-decoration-none">
+                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
+                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="fa-solid fa-motorcycle"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
+                                            <p
+                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
+                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
+                                                cupiditate dicta recusandae autem?</p>
+                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
+                                                yang lalu</p>
+                                        </div>
+                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
+                                            <span class="dot"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="notification cursor-pointer text-decoration-none">
+                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
+                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
+                                            <i class="fa-solid fa-motorcycle"></i>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
+                                            <p
+                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
+                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
+                                                cupiditate dicta recusandae autem?</p>
+                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
+                                                yang lalu</p>
+                                        </div>
+                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
+                                            <span class="dot"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <a href="" class="see-notification-all text-decoration-none">
+                                <p class="text-center text-capitalize p-1">Lihat Semua</p>
+                            </a>
                         </div>
-                    <a href="" class="nav-item nav-link"><i class="fa-solid fa-bell"></i><span
-                        class="badge">5</span></a>
-                    <a href="" class="nav-item nav-link"><i class="fa-solid fa-basket-shopping"></i><span
-                            class="badge">5</span> </a>
-                    <div href="" class="nav-item nav-link"><i class="fa-solid fa-user"></i> </div>
+                    </div>
+                    <div href="" class="nav-item nav-link" id="cart"><i
+                            class="fa-solid fa-basket-shopping cursor-pointer"></i><a href=""
+                            class="cart-text-collapse text-decoration-none">Keranjang</a><span class="badge">5</span>
+                        <div class="cart-wrapper">
+                            <div class="d-flex justify-content-between">
+                                <p class="text-start text-capitalize p-1">Keranjang</p>
+                                <a href=""
+                                    class="text-start text-decoration-none fw-light text-danger text-capitalize p-1 cursor-pointer">Lihat
+                                    Semua</a>
+                            </div>
+                            <div class="cart-wrapper-inside">
+                                <a href="" class="cart-item cursor-pointer text-decoration-none">
+                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
+                                        <div class="col-3 d-flex flex-column align-items-center justify-content-center">
+                                            <img src="assets/image/seblak-ceker.jpeg" alt=""
+                                                class="image-cart-size rounded">
+                                        </div>
+                                        <div class="col-4 d-flex flex-column justify-content-center">
+                                            <p class="text-transform-none p-2 fs-6 fw-bolder truncate">Seblak Ceker</p>
+                                        </div>
+                                        <div class="col-5 d-flex flex-column align-items-center justify-content-center">
+                                            <h6 class="text-transform-none">2 x Rp 15000</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div href="" class="nav-item nav-link cursor-pointer" id="user"><i class="fa-solid fa-user"></i>
+                        <p class="ms-1 text-ellipsis text-transform-none fw-bolder" style="max-width: 70px;">John Doe
+                        </p>
+                        <div
+                            class="user-wrapper d-flex flex-column align-items-center text-center justify-content-center">
+                            <a href="" class="text-decoration-none text-transform-none user-list my-1">Masuk</a>
+                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Daftar</a>
+                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Akun</a>
+                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Pesanan</a>
+                        </div>
+                    </div>
+                    <div class="search-form-collapse cursor-pointer mb-3">
+                        <form action="">
+                            <input class="search-form p-2" type="text" placeholder="Cari...">
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -52,7 +147,7 @@
                         <h1 class="d-3 text-white animated sliderInleft">
                             Nikmati keseruan pedas yang menggelegar
                         </h1>
-                        <p class="text-white animated slideInLeft">
+                        <p class="text-white animated slideInLeft fw-normal">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Suscipit nemo sed commodi repellendus, atque deserunt ipsum,
                             tempora voluptate eveniet praesentium laudantium temporibus ex
@@ -123,9 +218,9 @@
         <div class="container d-flex flex-column align-items-center justify-content-between mb-5">
             <h3 class="underline mb-4">Kode Promo</h3>
             <!-- <h5>-- Belum Tersedia <i class="fa-solid fa-face-sad-tear"></i> --</h5> -->
-            <div class="row d-flex justify-content-center discount-container">
+            <div class="row d-flex justify-content-around discount-container">
                 <div
-                    class="col-lg-3 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
+                    class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
                     <div class="discount-item rounded pt-3">
                         <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
@@ -135,7 +230,7 @@
                     </div>
                 </div>
                 <div
-                    class="col-lg-3 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
+                    class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
                     <div class="discount-item rounded pt-3">
                         <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
@@ -192,9 +287,9 @@
                                 class="fa-solid fa-check"></i></p>
                     </div>
                 </div>
-                <div class="col-4">
-                    <button class="btn btn-danger w-100 btn-hover-up">Lihat Semua Menu</button>
-                </div>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-danger w-100 btn-hover-up">Lihat Semua Menu</button>
             </div>
         </div>
         <hr>
@@ -267,7 +362,8 @@
         <div class="container py-5">
             <div class="row g-5 d-flex justify-content-between">
                 <div class="col-lg-3 col-md-6 d-flex flex-column align-items-start justify-content-start">
-                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Seblak Bombom <i class="fa-solid fa-pepper-hot ms-2"></i>
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Seblak
+                        Bombom <i class="fa-solid fa-pepper-hot ms-2"></i>
                     </h4>
                     <a href="" class="btn btn-link">Home</a>
                     <a href="" class="btn btn-link">Menu</a>
@@ -275,24 +371,32 @@
                     <a href="" class="btn btn-link">About</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami</h4>
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami
+                    </h4>
                     <p class="mb-2"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
                     <p class="mb-2"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
                     <p class="mb-2"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
                     <div class="row pt-2 gap-3">
-                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a>
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a>
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-facebook"></i>
+                            Facebook</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Jam Operasional</h4>
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Jam
+                        Operasional</h4>
                     <h5>Setiap Hari</h5>
                     <p>07:00 - 20:00</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam. Alias, tempore dolorum?</p>
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin
+                    </h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
+                        inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam.
+                        Alias, tempore dolorum?</p>
                     <button class="btn btn-danger">Registrasi</button>
                 </div>
             </div>
@@ -305,14 +409,15 @@
                         <a href="" class="text-decoration-none mb-3">&copy; Seblak Bombom 2024 Kebumen</a>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-between">
-                    <a href="" class="text-decoration-none mb-3">Syarat & Ketentuan</a>
-                    <a href="" class="text-decoration-none mb-3">Kebijakan Privasi</a>
+                        <a href="" class="text-decoration-none mb-3">Syarat & Ketentuan</a>
+                        <a href="" class="text-decoration-none mb-3">Kebijakan Privasi</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="assets/script.js"></script>
-    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
