@@ -141,158 +141,41 @@
                 </div>
             </div>
         </nav>
-        <div class="container-xxl py-5 mb-5">
-            <div class="container my-5 py-3">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6 text-lg-start text-center">
-                        <h1 class="d-3 text-white animated sliderInleft">
-                            Menyajikan menu yang spesial untuk anda
-                        </h1>
-                        <p class="text-white animated slideInLeft fw-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Suscipit nemo sed commodi repellendus, atque deserunt ipsum,
-                            tempora voluptate eveniet praesentium laudantium temporibus ex
-                            beatae doloremque? Quisquam reiciendis quas dolores velit?
-                        </p>
-                        <button id="listAllMenu" href=""
-                            class="btn btn-danger py-sm-3 px-sm-5 animated slideInLeft btn-hover-up">Lihat Semua
-                            Menu</button>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="assets/image/seblak-komplit.png" alt="" style="width: 100%; border-radius: 10px" />
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="container-xxl py-5">
-        <div id="all-menu" class="container d-flex flex-column align-items-center justify-content-between my-5">
-            <h3 class="mb-4 text-danger">List Menu</h3>
-            <h2 class="red-underline mb-5">Menampilkan Semua Menu</h2>
-            <div class="d-flex flex-column align-items-center justify-content-center gap-2">
-                <h5 class="border p-3 rounded w-100">Pilih Kategori <i class="fa-solid fa-list"></i></h5>
-                <select class="form-select" aria-label="select-menu">
-                    <option selected disabled>Pilih salah satu</option>
-                    <option value="1">Makanan</option>
-                    <option value="2">Minuman</option>
-                    <option value="3">Snack</option>
-                </select>
-            </div>
-            <div class="row d-flex justify-content-center mt-3 g-4 discount-container mb-5">
-                <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3 d-flex flex-column align-items-center">
-                        <img src="assets/image/seblak-ceker.jpeg" class="product-item-image rounded mb-3" alt="">
-                        <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
-                        <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
-                        <div class="quantity-wrapper border mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+        <div class="container d-flex flex-column align-items-center justify-content-between my-5">
+            <div class="row d-flex align-items-center justify-content-between w-100">
+                <div class="col-8">
+                    <div class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
+                        <h2 class="text-danger p-3 red-underline">Checkout</h2>
+                        <div class="col-2 d-flex align-items-center justify-content-center w-100">
+                            <img src="assets/image/shopping-cart.png" class="shopping-cart-img" alt="">
+                            <p class="text-center">Ini halaman terakhir dari proses belanjamu. Pastikan semua sudah benar, ya. :)</p>
                         </div>
-                        <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Tambahkan ke <i
-                                    class="fa-solid fa-basket-shopping"></i></button>
+                        <div class="mt-4">
+                            <h4>Makanan Yang Dibeli</h4>
                         </div>
-                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
-                                class="fa-solid fa-check"></i></p>
+                        <div class="col-11 border rounded-sm">
+                            <div class="row">
+                                <div class="col-2 border border-danger d-flex align-items-center">
+                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout" alt="">
+                                </div>
+                                <div class="col-9 border border-danger">
+                                    <h5>Seblak Spesial</h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3 d-flex flex-column align-items-center">
-                        <img src="assets/image/seblak-krupuk.jpeg" class="product-item-image rounded mb-3" alt="">
-                        <h4 class="bold-text cursor-pointer text-center">Seblak Kerupuk</h4>
-                        <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
-                        <div class="quantity-wrapper border  mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Tambahkan ke <i
-                                    class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
-                                class="fa-solid fa-check"></i></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3 d-flex flex-column align-items-center">
-                        <img src="assets/image/seblak-ceker.jpeg" class="product-item-image rounded mb-3" alt="">
-                        <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
-                        <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
-                        <div class="quantity-wrapper border  mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Tambahkan ke <i
-                                    class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
-                                class="fa-solid fa-check"></i></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3 d-flex flex-column align-items-center">
-                        <img src="assets/image/kopi-hitam.png" class="product-item-image rounded mb-3" alt="">
-                        <h4 class="bold-text cursor-pointer text-center">Kopi Hitam</h4>
-                        <h5 class="text-center text-danger mb-3">Rp 5,000</h5>
-                        <div class="quantity-wrapper border mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
-                        </div>
-                        <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Tambahkan ke <i
-                                    class="fa-solid fa-basket-shopping"></i></button>
-                        </div>
-                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
-                                class="fa-solid fa-check"></i></p>
-                    </div>
+                <div class="col-4 border">
+
                 </div>
             </div>
-            <nav aria-label="Page navigation example mt-5">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link">Sebelumnya</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Selanjutnya</a>
-                    </li>
-                </ul>
-            </nav>
+            
+           
         </div>
     </div>
-    <!-- Modal Add To Cart -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content d-flex flex-column align-items-center justify-content-center">
-                <img src="assets/image/tick.png" alt="" class="modal-img">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Berhasil Menambahkan Produk Ke Keranjang</h1>
-                </div>
-                <div class="modal-body">
-                    <a href="" class="text-center">Lihat Semua Keranjang</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">OK</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeInUp" style="height: auto;">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeInUp h-auto">
         <div class="container py-5">
             <div class="row g-5 d-flex justify-content-between">
                 <div class="col-lg-3 col-md-6 d-flex flex-column align-items-start justify-content-start">
