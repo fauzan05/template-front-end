@@ -32,4 +32,20 @@ if (plusButton && minusButton && quantity) {
     })
 }
 
-// Tambahkan Ke keranjang
+// Tambah Catatan
+const addNoteButton = document.getElementById("add-note");
+const addNoteInput = document.getElementById("add-note-input");
+if (addNoteButton && addNoteInput) {
+    state = Boolean(false)
+    addNoteButton.addEventListener("click", () => {
+        state = !state;
+        if (state) {
+            addNoteInput.classList.remove("d-none")
+            addNoteInput.classList.add("d-block")
+        } else {
+            addNoteInput.classList.remove("d-block")
+            addNoteInput.classList.add("d-none")
+        }
+        console.log(state)
+    })
+}

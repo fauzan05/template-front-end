@@ -18,9 +18,9 @@
     <div class="container-xxl hero-header position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-lg-0">
             <a href="" class="navbar-brand mt-3 text-decoration-none">
-                <h1 class="m-0 title-name-app text-danger">
+                <h1 class="m-0 title-name-app text-white">
                     Seblak Bombom
-                    <i class="fa-solid fa-pepper-hot ms-2"></i>
+                    <i class="fa-solid fa-pepper-hot ms-2 text-danger"></i>
                 </h1>
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" type="button">
@@ -150,25 +150,86 @@
                         <h2 class="text-danger p-3 red-underline">Checkout</h2>
                         <div class="col-2 d-flex align-items-center justify-content-center w-100">
                             <img src="assets/image/shopping-cart.png" class="shopping-cart-img" alt="">
-                            <p class="text-center">Ini halaman terakhir dari proses belanjamu. Pastikan semua sudah benar, ya. :)</p>
+                            <p class="text-center">Ini adalah halaman terakhir dari proses belanjamu. Pastikan semua sudah benar, ya. :)</p>
                         </div>
-                        <div class="mt-4">
-                            <h4>Makanan Yang Dibeli</h4>
+                        <div class="col-11 mt-4">
+                            <h5>Pesanan Kamu</h5>
                         </div>
-                        <div class="col-11 border rounded-sm">
+                        <div class="col-11 border rounded-sm my-2">
                             <div class="row">
-                                <div class="col-2 border border-danger d-flex align-items-center">
+                                <div class="col-2 d-flex align-items-center">
                                     <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout" alt="">
                                 </div>
-                                <div class="col-9 border border-danger">
-                                    <h5>Seblak Spesial</h5>
+                                <div class="col-6 border-end">
+                                    <h5 class="m-3">Seblak Spesial</h5>
+                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
                                 </div>
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="quantity-wrapper border mb-4 mt-2">
+                                        <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
+                                        <input id="quantity" class="w-10 text-center" type="text" value="1">
+                                        <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 border rounded-sm my-2">
+                            <div class="row">
+                                <div class="col-2 d-flex align-items-center">
+                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout" alt="">
+                                </div>
+                                <div class="col-6 border-end">
+                                    <h5 class="m-3">Seblak Spesial</h5>
+                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
+                                </div>
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="quantity-wrapper border mb-4 mt-2">
+                                        <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
+                                        <input id="quantity" class="w-10 text-center" type="text" value="1">
+                                        <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 border rounded-sm my-2">
+                            <div class="row">
+                                <div class="col-2 d-flex align-items-center">
+                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout" alt="">
+                                </div>
+                                <div class="col-6 border-end">
+                                    <h5 class="m-3">Seblak Spesial</h5>
+                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
+                                </div>
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="quantity-wrapper border mb-4 mt-2">
+                                        <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
+                                        <input id="quantity" class="w-10 text-center" type="text" value="1">
+                                        <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 my-2">
+                            <span id="add-note" class="text-danger cursor-pointer">Tambah Catatan</span>
+                            <div class="mb-3 d-none" id="add-note-input">
+                                <label for="exampleFormControlTextarea1" class="form-label">Tulis Catatan Untuk Pesananmu</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <hr class="border border-5 my-3">
+                        <div class="col-11">
+                            <h5>Pengiriman & Pembayaran</h5>
+                            <div class="delivery-option-wrapper my-4">
+                                <input type="radio" name="isDelivery" class="delivery-option" id="delivery">
+                                <label for="delivery" class="delivery-label">Diantar</label>
+                                <input type="radio" name="isDelivery" class="delivery-option" id="takeAway">
+                                <label for="takeAway" class="take-away-label">Ambil Sendiri</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-4 border">
-
+        
                 </div>
             </div>
             
