@@ -538,6 +538,34 @@
     background-color: var(--primary);
 }
 
+.discount-option{
+    height: 40px;   
+}
+
+.discount-input{
+    height: 40px;
+    width: 70%;
+}
+
+.discount-input:focus{
+    border: 1px solid red !important;
+    outline: none !important;
+    /* box-shadow: 0 0 10px #719ECE; */
+}
+
+.modal-body-discount-wrapper{
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body-discount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+
 
  /* Media Navbar */ 
 

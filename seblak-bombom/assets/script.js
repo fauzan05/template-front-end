@@ -13,23 +13,45 @@ if (listAllMenu) {
 }
 
 // Button Plus & Minus Count Quantity
-const plusButton = document.getElementById("plus");
-const minusButton = document.getElementById("minus");
-const quantity = document.getElementById("quantity");
+const plusButtons = document.getElementsByClassName("plus-button");
+const minusButtons = document.getElementsByClassName("minus-button");
+const quantities = document.getElementsByClassName("quantity");
 
-if (plusButton && minusButton && quantity) {
-    plusButton.addEventListener("click", () => {
-        quantity.value = parseInt(quantity.value, 10);
-        quantity.value++;
-    })
-    minusButton.addEventListener("click", () => {
-        quantity.value = parseInt(quantity.value, 10);
-        if (quantity.value == 0) {
-            quantity.value = 0;
-        } else  {
-            quantity.value--;
+if (plusButtons && minusButtons && quantities) {
+    Array.from(quantities).forEach((quantity, index) => {
+        if (quantity.value == 1) {
+            minusButtons[index].classList.remove("text-danger");
+            minusButtons[index].classList.add("text-secondary");
+        } else if (quantity.value > 1) {
+            minusButtons[index].classList.add("text-danger");
+            minusButtons[index].classList.remove("text-secondary");
         }
     })
+    Array.from(plusButtons).forEach((plusButton, index) => {
+        plusButton.addEventListener("click", () => {
+            if (quantities[index].value >= 1) {
+                minusButtons[index].classList.add("text-danger");
+                minusButtons[index].classList.remove("text-secondary");
+            }
+            quantities[index].value++;
+        })
+    })
+    Array.from(minusButtons).forEach((minusButton, index) => {
+        minusButton.addEventListener("click", () => {
+            if (quantities[index].value == 1 || quantities[index].value == 2) {
+                minusButton.classList.remove("text-danger");
+                minusButton.classList.add("text-secondary");
+                quantities[index].value = 1;
+            } else {
+                if (quantities[index].value > 1) {
+                    minusButtons[index].classList.add("text-danger");
+                    minusButtons[index].classList.remove("text-secondary");
+                }
+                quantities[index].value--;
+            }
+        })
+    })
+
 }
 
 // Tambah Catatan
@@ -46,6 +68,12 @@ if (addNoteButton && addNoteInput) {
             addNoteInput.classList.remove("d-block")
             addNoteInput.classList.add("d-none")
         }
-        console.log(state)
+        // console.log(state)
     })
 }
+
+// digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
+// window.onload = function() {
+//     var myModal = new bootstrap.Modal(document.getElementById('setDiscountModal'));
+//     myModal.show();
+// };
