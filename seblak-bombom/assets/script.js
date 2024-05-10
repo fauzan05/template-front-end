@@ -74,6 +74,6 @@ if (addNoteButton && addNoteInput) {
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
 // window.onload = function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('setDiscountModal'));
+//     var myModal = new bootstrap.Modal(document.getElementById('transactionDetailModal'));
 //     myModal.show();
 // };

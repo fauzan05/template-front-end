@@ -171,7 +171,7 @@
             <h2 class="red-underline mb-5">Menampilkan Semua Menu</h2>
             <div class="d-flex flex-column align-items-center justify-content-center gap-2">
                 <h5 class="border p-3 rounded w-100">Pilih Kategori <i class="fa-solid fa-list"></i></h5>
-                <select class="form-select" aria-label="select-menu">
+                <select class="form-select w-100" aria-label="select-menu">
                     <option selected disabled>Pilih salah satu</option>
                     <option value="1">Makanan</option>
                     <option value="2">Minuman</option>
@@ -185,12 +185,12 @@
                         <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
                         <div class="quantity-wrapper border mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                         </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
+                            <a class="btn btn-danger">Pesan Sekarang</a>
                             <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
@@ -204,13 +204,13 @@
                         <img src="assets/image/seblak-krupuk.jpeg" class="product-item-image rounded mb-3" alt="">
                         <h4 class="bold-text cursor-pointer text-center">Seblak Kerupuk</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
-                        <div class="quantity-wrapper border  mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                         </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
+                            <a class="btn btn-danger">Pesan Sekarang</a>
                             <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
@@ -224,13 +224,13 @@
                         <img src="assets/image/seblak-ceker.jpeg" class="product-item-image rounded mb-3" alt="">
                         <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
-                        <div class="quantity-wrapper border  mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                         </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
+                            <a class="btn btn-danger">Pesan Sekarang</a>
                             <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
@@ -245,12 +245,12 @@
                         <h4 class="bold-text cursor-pointer text-center">Kopi Hitam</h4>
                         <h5 class="text-center text-danger mb-3">Rp 5,000</h5>
                         <div class="quantity-wrapper border mb-4 mt-2">
-                            <i id="minus" class="fa-solid fa-minus text-danger me-2 cursor-pointer"></i>
-                            <input id="quantity" class="w-10 text-center" type="text" value="1">
-                            <i id="plus" class="fa-solid fa-plus text-danger ms-2 cursor-pointer"></i>
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                         </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
+                            <a class="btn btn-danger">Pesan Sekarang</a>
                             <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
@@ -265,11 +265,11 @@
                     <li class="page-item disabled">
                         <a class="page-link">Sebelumnya</a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
                     <li class="page-item">
-                        <a class="page-link" href="#">Selanjutnya</a>
+                        <a class="page-link text-danger" href="#">Selanjutnya</a>
                     </li>
                 </ul>
             </nav>
@@ -307,9 +307,9 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami
                     </h4>
-                    <p class="mb-2"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
-                    <p class="mb-2"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
-                    <p class="mb-2"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
+                    <p class="mb-2 fw-normal"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
+                    <p class="mb-2 fw-normal"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
+                    <p class="mb-2 fw-normal"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
                     <div class="row pt-2 gap-3">
                         <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i>
                             Instagram</a>
@@ -322,16 +322,16 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Jam
                         Operasional</h4>
-                    <h5>Setiap Hari</h5>
-                    <p>07:00 - 20:00</p>
+                    <h5 class="fw-normal">Setiap Hari</h5>
+                    <p class="fw-normal">07:00 - 20:00</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin
                     </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
+                    <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
                         inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam.
                         Alias, tempore dolorum?</p>
-                    <button class="btn btn-danger">Registrasi</button>
+                    <button class="btn btn-danger mt-3">Registrasi</button>
                 </div>
             </div>
         </div>

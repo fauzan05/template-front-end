@@ -18,7 +18,7 @@
     <div class="container-xxl hero-header position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-lg-0">
             <a href="" class="navbar-brand mt-3 text-decoration-none">
-                <h1 class="m-0 title-name-app text-white">
+                <h1 class="title-name-app text-white">
                     Seblak Bombom
                     <i class="fa-solid fa-pepper-hot ms-2 text-danger"></i>
                 </h1>
@@ -51,14 +51,13 @@
                                             <i class="fa-solid fa-motorcycle"></i>
                                         </div>
                                         <div class="col-8">
-                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
-                                            <p
-                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
+                                            <p class="text-transform-none">Lorem Ipsum</p>
+                                            <p class="text-transform-none fs-smaller fw-lighter truncate text-justify">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
                                                 expedita molestias ut odit. Voluptate eum voluptates necessitatibus
                                                 autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
                                                 cupiditate dicta recusandae autem?</p>
-                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
+                                            <p class="text-transform-none fs-smaller fw-lighter text-danger">5 Menit
                                                 yang lalu</p>
                                         </div>
                                         <div class="col-2 d-flex flex-column align-items-center justify-content-center">
@@ -72,14 +71,13 @@
                                             <i class="fa-solid fa-motorcycle"></i>
                                         </div>
                                         <div class="col-8">
-                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
-                                            <p
-                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
+                                            <p class="text-transform-none">Lorem Ipsum</p>
+                                            <p class="text-transform-none fs-smaller fw-lighter truncate text-justify">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
                                                 expedita molestias ut odit. Voluptate eum voluptates necessitatibus
                                                 autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
                                                 cupiditate dicta recusandae autem?</p>
-                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
+                                            <p class="text-transform-none fs-smaller fw-lighter text-danger">5 Menit
                                                 yang lalu</p>
                                         </div>
                                         <div class="col-2 d-flex flex-column align-items-center justify-content-center">
@@ -143,20 +141,283 @@
         </nav>
     </div>
     <div class="container-xxl py-3">
-        <div class="container d-flex flex-column align-items-center justify-content-between my-5">
+        <div class="container d-flex flex-column align-items-center justify-content-center my-5">
             <div class="row d-flex align-items-start justify-content-between w-100">
                 <div class="col-12">
-                    <div class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
+                    <div
+                        class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
                         <h2 class="text-danger p-3 red-underline">Daftar Transaksi</h2>
-                        <div class="search-bar-wrapper border m-0 g-0">
-                            <label for="search-input" class="d-flex align-items-center"><i class="fa-solid fa-magnifying-glass ms-2 me-2"></i></label>
-                            <input id="search-input" class="m-0 fw-normal" type="text">
+                        <div class="col-11 d-flex align-items-center justify-content-around my-4">
+                            <div class="search-bar-wrapper border m-0 g-0">
+                                <label for="search-input" class="d-flex align-items-center"><i
+                                        class="fa-solid fa-magnifying-glass ms-2 me-2"></i></label>
+                                <input id="search-input" class="m-0 fw-normal" type="text"
+                                    placeholder="Cari transaksimu disini">
+                            </div>
+                            <select class="form-select" aria-label="select-menu">
+                                <option selected disabled>Pilih Kategori</option>
+                                <option value="1">Makanan</option>
+                                <option value="2">Minuman</option>
+                                <option value="3">Snack</option>
+                            </select>
+                            <input class="input-date border" type="date">
+                        </div>
+                        <div class="col-11 d-flex align-items-center justify-content-around mt-2 mb-4">
+                            <h5>Status</h5>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-outline-danger">Semua</button>
+                                <button type="button" class="btn btn-outline-danger">Berlangsung</button>
+                                <button type="button" class="btn btn-outline-danger">Berhasil</button>
+                                <button type="button" class="btn btn-outline-danger">Tidak Berhasil</button>
+                            </div>
+                            <h5 class="text-danger cursor-pointer">Reset Filter</h5>
+                        </div>
+                        <div class="col-11 d-flex flex-column align-items-center justify-content-start">
+                            <div class="row m-0 w-100">
+                                <!-- order -->
+                                <div class="col-12 border rounded-sm my-3">
+                                    <div class="row">
+                                        <div class="col-12 d-flex p-3">
+                                            <i class="fa-solid fa-bag-shopping me-2"></i>
+                                            <h6 class="fw-bold me-3">Belanja</h6>
+                                            <h6 class="fw-light me-2">25 Feb 2024</h6>
+                                            <span
+                                                class="badge badge-success me-3 rounded-sm d-flex align-items-center">Selesai</span>
+                                            <h6 class="fw-light">INV/20240226/MPL/3759553371</h6>
+                                        </div>
+                                        <div class="col-12 d-flex p-3">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/image/seblak-spesial.png"
+                                                    class="rounded-sm image-product-checkout" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h5>Seblak Spesial</h5>
+                                                <h6>1 Porsi x Rp 15.000</h6>
+                                            </div>
+                                            <div
+                                                class="col-3 border-start d-flex flex-column align-items-center justify-content-center">
+                                                <h6>Total Belanja</h6>
+                                                <h5>Rp 15.000</h5>
+                                            </div>
+                                        </div>
+                                        <hr class="border border-5 mt-1 mb-3 w-100">
+                                        <div class="col-12 d-flex align-items-end justify-content-end p-3">
+                                            <h6 class="text-danger cursor-pointer me-5" data-bs-toggle="modal"
+                                                data-bs-target="#transactionDetailModal">Lihat Detail Transaksi</h6>
+                                                <button class="btn btn-danger w-25">Pesan Lagi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 border rounded-sm my-3">
+                                    <div class="row">
+                                        <div class="col-12 d-flex p-3">
+                                            <i class="fa-solid fa-bag-shopping me-2"></i>
+                                            <h6 class="fw-bold me-3">Belanja</h6>
+                                            <h6 class="fw-light me-2">25 Feb 2024</h6>
+                                            <span
+                                                class="badge badge-success me-3 rounded-sm d-flex align-items-center">Selesai</span>
+                                            <h6 class="fw-light">INV/20240226/MPL/3759553371</h6>
+                                        </div>
+                                        <div class="col-12 d-flex p-3">
+                                            <div class="col-2 d-flex align-items-center justify-content-center">
+                                                <img src="assets/image/seblak-spesial.png"
+                                                    class="rounded-sm image-product-checkout" alt="">
+                                            </div>
+                                            <div class="col-7">
+                                                <h5>Seblak Spesial</h5>
+                                                <h6>1 Porsi x Rp 15.000</h6>
+                                            </div>
+                                            <div
+                                                class="col-3 border-start d-flex flex-column align-items-center justify-content-center">
+                                                <h6>Total Belanja</h6>
+                                                <h5>Rp 15.000</h5>
+                                            </div>
+                                        </div>
+                                        <hr class="border border-5 mt-1 mb-3 w-100">
+                                        <div class="col-12 d-flex align-items-end justify-content-end p-3">
+                                            <h6 class="text-danger cursor-pointer me-5" data-bs-toggle="modal"
+                                                data-bs-target="#transactionDetailModal">Lihat Detail Transaksi</h6>
+                                                <button class="btn btn-danger w-25">Pesan Lagi</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 d-flex align-items-center justify-content-center my-5">
+                            <nav aria-label="Page navigation example mt-5">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Sebelumnya</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link text-danger" href="#">Selanjutnya</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal Detail Transaksi -->
+    <div class="modal fade" id="transactionDetailModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4" id="exampleModalLabel">Detail Tansaksi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex row m-0">
+                    <div class="col-8 border rounded-sm transaction-detail-modal">
+                        <div class="col-12 d-flex align-items-center justify-content-between p-3">
+                            <h5 class="fs-5">Pesanan Selesai</h5>
+                            <!-- <h5 class="fs-6 text-danger">Lihat Detail <i class="fa-solid fa-angle-down"></i></h5> -->
+                        </div>
+                        <hr class="dashed-hr text-danger">
+                        <div class="col-12 d-flex align-items-center justify-content-between p-3">
+                            <p>No. Invoice</p>
+                            <h5 class="text-danger fs-6">INV/20240226/MPL/3759553371</h5>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-between p-3">
+                            <p>Tanggal Pembelian</p>
+                            <h5 class="text-danger fs-6">11 Mei 2023, 04:58 WIB</h5>
+                        </div>
+                        <hr class="border border-5 mt-1 mb-3 w-100">
+                        <h5 class="text-start">Detail Pesanan</h5>
+                        <div class="row d-flex flex-column align-items-center justify-content-center w-100">
+                            <!-- item-nya -->
+                            <div class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
+                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                    <img src="assets/image/seblak-spesial.png"
+                                        class="rounded-sm image-product-checkout" alt="">
+                                </div>
+                                <div class="col-7">
+                                    <h5>Seblak Spesial</h5>
+                                    <p class="fw-light">1 x Rp 15.000</p>
+                                    <p>Total : 15.000</p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-danger">Pesan Lagi</button>
+                                </div>
+                            </div>
+                            <div class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
+                                <div class="col-2 d-flex align-items-center justify-content-center">
+                                    <img src="assets/image/seblak-spesial.png"
+                                        class="rounded-sm image-product-checkout" alt="">
+                                </div>
+                                <div class="col-7">
+                                    <h5>Seblak Spesial</h5>
+                                    <p class="fw-light">1 x Rp 15.000</p>
+                                    <p>Total : 15.000</p>
+                                </div>
+                                <div class="col-3">
+                                    <button class="btn btn-danger">Pesan Lagi</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="text-start my-3">Info Pengiriman</h5>
+                            <div class="col-12">
+                                <p class="fw-normal my-2">Metode Pengiriman <span style="margin-left: 24px;">:</span> </p> 
+                                <p class="fw-normal my-2">Alamat <span style="margin-left: 114px;">:</span> </p>
+                                <p class="fw-normal my-2">Status <span style="margin-left: 121px;">:</span> <span class="text-success">Berhasil Diantar</span></p>
+                            </div>
+                            <h5 class="text-start my-3">Rincian Pembayaran</h5>
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <p class="fw-normal my-2">Metode Pembayaran</p>
+                                <p class="fw-normal">Mandiri Virtual Account</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <p class="fw-normal my-2">Total Harga (2 Barang)</p>
+                                <p class="fw-normal">Rp 30.000</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <p class="fw-normal my-2">Total Ongkos Kirim</p>
+                                <p class="fw-normal">Rp 5.000</p>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-between">
+                                <p class="fw-normal my-2">Potongan Diskon</p>
+                                <p class="fw-normal">Rp 5.000</p>
+                            </div>
+                            <div class="col-12 my-3 d-flex align-items-center justify-content-between">
+                                <h5 class="fw-bolder my-2">Total Belanja</h5>
+                                <h5 class="fw-bolder my-2">Rp 30.000</h5>
+                            </div> 
+                    </div>
+                    <div class="col-4 border rounded-sm d-flex g-0">
+                        <div class="row d-flex flex-column align-items-center justify-content-between w-100 m-0">
+                            <button class="btn btn-success mt-5 w-75">Chat Penjual <i class="fa-brands fa-whatsapp"></i></button>
+                            <img src="assets/image/seblak-img.png" class="w-100 g-0" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeInUp" style="height: auto;">
+        <div class="container py-5">
+            <div class="row g-5 d-flex justify-content-between">
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-start justify-content-start">
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Seblak
+                        Bombom <i class="fa-solid fa-pepper-hot ms-2"></i>
+                    </h4>
+                    <a href="" class="btn btn-link">Home</a>
+                    <a href="" class="btn btn-link">Menu</a>
+                    <a href="" class="btn btn-link">Service</a>
+                    <a href="" class="btn btn-link">About</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami
+                    </h4>
+                    <p class="mb-2 fw-normal"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
+                    <p class="mb-2 fw-normal"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
+                    <p class="mb-2 fw-normal"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
+                    <div class="row pt-2 gap-3">
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i>
+                            Instagram</a>
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-x-twitter"></i>
+                            Twitter</a>
+                        <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-facebook"></i>
+                            Facebook</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Jam
+                        Operasional</h4>
+                    <h5 class="fw-normal">Setiap Hari</h5>
+                    <p class="fw-normal">07:00 - 20:00</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin
+                    </h4>
+                    <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
+                        inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam.
+                        Alias, tempore dolorum?</p>
+                    <button class="btn btn-danger mt-3">Registrasi</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="copyright">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-md-6 col-lg-6">
+                        <a href="" class="text-decoration-none mb-3">&copy; Seblak Bombom 2024 Kebumen</a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex justify-content-between">
+                        <a href="" class="text-decoration-none mb-3">Syarat & Ketentuan</a>
+                        <a href="" class="text-decoration-none mb-3">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

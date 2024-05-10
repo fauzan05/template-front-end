@@ -145,7 +145,7 @@
             <div class="container my-5 py-3">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 text-lg-start text-center">
-                        <h1 class="d-3 text-white animated sliderInleft">
+                        <h1 class="d-3 mb-3 text-white animated sliderInleft">
                             Nikmati keseruan pedas yang menggelegar
                         </h1>
                         <p class="text-white animated slideInLeft fw-normal">
@@ -155,7 +155,7 @@
                             beatae doloremque? Quisquam reiciendis quas dolores velit?
                         </p>
                         <button id="orderNowButton"
-                            class="btn btn-danger py-sm-3 px-sm-5 animated slideInLeft btn-hover-up">Pesan
+                            class="btn btn-danger py-sm-3 mt-5 px-sm-5 animated slideInLeft btn-hover-up">Pesan
                             Sekarang</button>
                     </div>
                     <div class="col-lg-6">
@@ -175,7 +175,7 @@
                         <div class="p-4 text-center">
                             <i class="fa-3x fa-solid fa-stopwatch-20 mb-3"></i>
                             <h5 class="bold-text">Proses Memasak Cepat</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
+                            <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
                                 dicta iste a molestias odio sed. Labore nostrum a consectetur, error repellendus quo aut
                                 amet temporibus modi quisquam!</p>
                         </div>
@@ -186,7 +186,7 @@
                         <div class="p-4 text-center">
                             <i class="fa-3x fa-solid fa-money-check-dollar mb-3"></i>
                             <h5 class="bold-text">Berbagai Pilihan Metode Pembayaran</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
+                            <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
                                 dicta iste a molestias odio sed. Labore nostrum a consectetur, error repellendus quo aut
                                 amet temporibus modi quisquam!</p>
                         </div>
@@ -197,7 +197,7 @@
                         <div class="p-4 text-center">
                             <i class="fa-3x fa-solid fa-motorcycle mb-3"></i>
                             <h5 class="bold-text">Terdapat layanan pengantaran sampai rumah</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
+                            <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
                                 dicta iste a molestias odio sed. Labore nostrum a consectetur, error repellendus quo aut
                                 amet temporibus modi quisquam!</p>
                         </div>
@@ -208,7 +208,7 @@
                         <div class="p-4 text-center">
                             <i class="fa-3x fa-brands fa-whatsapp mb-3"></i>
                             <h5 class="bold-text">Bisa pesan via Whatsapp</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
+                            <p class="fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minus laborum ex
                                 dicta iste a molestias odio sed. Labore nostrum a consectetur, error repellendus quo aut
                                 amet temporibus modi quisquam!</p>
                         </div>
@@ -226,7 +226,7 @@
                         <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
-                        <p class="text-center m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eius
+                        <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eius
                             eum id distinctio.</p>
                     </div>
                 </div>
@@ -236,7 +236,7 @@
                         <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
-                        <p class="text-center m-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eius
+                        <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum eius
                             eum id distinctio.</p>
                     </div>
                 </div>
@@ -247,44 +247,82 @@
             <h2 class="red-underline mb-5">Menu Paling Laris!</h2>
             <div class="row d-flex justify-content-center mt-3 g-4 discount-container">
                 <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3">
+                    <div class="p-3 d-flex flex-column align-items-center">
                         <img src="assets/image/seblak-ceker.jpeg" class="product-item-image rounded mb-3" alt="">
                         <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
+                        </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button class="btn btn-success">Tambahkan ke <i
+                            <a class="btn btn-danger">Pesan Sekarang</a>
+                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
                         </div>
-                        <p class="text-success text-center border border-success rounded">Tersedia <i
+                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
                                 class="fa-solid fa-check"></i></p>
                     </div>
                 </div>
                 <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3">
+                    <div class="p-3 d-flex flex-column align-items-center">
                         <img src="assets/image/seblak-krupuk.jpeg" class="product-item-image rounded mb-3" alt="">
                         <h4 class="bold-text cursor-pointer text-center">Seblak Kerupuk</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
+                        </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button class="btn btn-success">Tambahkan ke <i
+                            <a class="btn btn-danger">Pesan Sekarang</a>
+                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
                         </div>
-                        <p class="text-success text-center border border-success rounded">Tersedia <i
+                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
                                 class="fa-solid fa-check"></i></p>
                     </div>
                 </div>
                 <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
-                    <div class="p-3">
+                    <div class="p-3 d-flex flex-column align-items-center">
                         <img src="assets/image/seblak-ceker.jpeg" class="product-item-image rounded mb-3" alt="">
                         <h4 class="bold-text cursor-pointer text-center">Seblak Ceker</h4>
                         <h5 class="text-center text-danger mb-3">Rp 15,000</h5>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
+                        </div>
                         <div class="d-flex flex-row justify-content-between mb-4 gap-3">
-                            <button class="btn btn-danger">Pesan Sekarang</button>
-                            <button class="btn btn-success">Tambahkan ke <i
+                            <a class="btn btn-danger">Pesan Sekarang</a>
+                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Tambahkan ke <i
                                     class="fa-solid fa-basket-shopping"></i></button>
                         </div>
-                        <p class="text-success text-center border border-success rounded">Tersedia <i
+                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
+                                class="fa-solid fa-check"></i></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 gap-0 p-0 product-item rounded col-sm-4 fadeInUp mb-3 width-auto">
+                    <div class="p-3 d-flex flex-column align-items-center">
+                        <img src="assets/image/kopi-hitam.png" class="product-item-image rounded mb-3" alt="">
+                        <h4 class="bold-text cursor-pointer text-center">Kopi Hitam</h4>
+                        <h5 class="text-center text-danger mb-3">Rp 5,000</h5>
+                        <div class="quantity-wrapper border mb-4 mt-2">
+                            <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                            <input class="w-10 text-center quantity" type="text" value="1">
+                            <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between mb-4 gap-3">
+                            <a class="btn btn-danger">Pesan Sekarang</a>
+                            <button id="addToCart" class="btn btn-success" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Tambahkan ke <i
+                                    class="fa-solid fa-basket-shopping"></i></button>
+                        </div>
+                        <p class="text-success text-center border border-success rounded is-available">Tersedia <i
                                 class="fa-solid fa-check"></i></p>
                     </div>
                 </div>
@@ -316,16 +354,16 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3 class="section-title ff-secondary text-start text-danger fw-normal red-underline d-inline-block">
+                    <h3 class="section-title my-2 ff-secondary text-start text-danger fw-normal red-underline d-inline-block">
                         Tentang kami</h3>
-                    <h1>Selamat Datang di <span class="text-danger"> <i class="fa-solid fa-pepper-hot ms-2"></i>
+                    <h1 class="my-2">Selamat Datang di <span class="text-danger"> <i class="fa-solid fa-pepper-hot ms-2"></i>
                         </span></h1>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam enim
+                    <p class="text-justify fw-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime totam enim
                         cupiditate quasi iusto praesentium voluptatem officiis, laboriosam sapiente ut nihil pariatur
                         cumque soluta ducimus dicta incidunt! Libero, at hic! Lorem ipsum, dolor sit amet consectetur
                         adipisicing elit. Placeat amet officia soluta sequi, sapiente quod fugiat minima cupiditate
                         mollitia, rerum rem? Illo modi possimus libero quis aut porro nobis distinctio?</p>
-                    <div class="row g-4 mb-4">
+                    <div class="row g-4 my-2">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-danger px-3">
                                 <h1 class="flex-shrink-0 display-5 text-danger mb-0">2</h1>
@@ -359,6 +397,21 @@
             </div>
         </div>
     </div>
+    <!-- Modal Add To Cart -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content d-flex flex-column align-items-center justify-content-center">
+                <img src="assets/image/tick.png" alt="" class="modal-img">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Berhasil Menambahkan Produk Ke Keranjang</h1>
+                </div>
+                <div class="modal-body">
+                    <a href="" class="text-center text-decoration-none text-danger">Lihat Semua Keranjang</a>
+                </div>
+                <button type="button" class="btn btn-danger w-50 my-3" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeInUp" style="height: auto;">
         <div class="container py-5">
             <div class="row g-5 d-flex justify-content-between">
@@ -374,9 +427,9 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami
                     </h4>
-                    <p class="mb-2"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
-                    <p class="mb-2"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
-                    <p class="mb-2"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
+                    <p class="mb-2 fw-normal"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
+                    <p class="mb-2 fw-normal"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
+                    <p class="mb-2 fw-normal"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
                     <div class="row pt-2 gap-3">
                         <a href="" class="btn btn-outline-light btn-social"><i class="fa-brands fa-instagram"></i>
                             Instagram</a>
@@ -389,16 +442,16 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Jam
                         Operasional</h4>
-                    <h5>Setiap Hari</h5>
-                    <p>07:00 - 20:00</p>
+                    <h5 class="fw-normal">Setiap Hari</h5>
+                    <p class="fw-normal">07:00 - 20:00</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin
                     </h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
+                    <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
                         inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam.
                         Alias, tempore dolorum?</p>
-                    <button class="btn btn-danger">Registrasi</button>
+                    <button class="btn btn-danger mt-3">Registrasi</button>
                 </div>
             </div>
         </div>

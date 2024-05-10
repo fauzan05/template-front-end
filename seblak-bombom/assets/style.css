@@ -3,6 +3,11 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
 }
 
 :root {
@@ -27,6 +32,11 @@
 
 .title-name-app {
     color: aliceblue;
+}
+
+select:focus{
+    outline: none !important;
+    border: 0.5px solid var(--primary);
 }
 
 .rounded{
@@ -263,6 +273,7 @@
 }
 
 .search-form:focus{
+    outline: none !important;
     border: 1px solid var(--primary) !important;
 }
 
@@ -466,6 +477,7 @@
 }
 
 .quantity-wrapper input:focus{
+    outline: none;
     border: 1px solid var(--primary) !important;
 }
 
@@ -589,6 +601,51 @@
     outline: none !important;
 }
 
+.form-select{
+    width: 30%;
+}
+
+.input-date{
+    background-color: white;
+    outline: none;
+    height: 40px;
+    width: 20%;
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 15px;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: 0.5px solid var(--primary);
+    border-radius: 5px;
+}
+
+.badge-success{
+    color: rgba(3,172,13,255) !important;
+    background-color: rgba(214,253,222,255);
+}
+.badge-failed{
+    color: rgba(3,172,13,255) !important;
+    background-color: rgba(214,253,222,255);
+}
+
+.dashed-hr{
+    border-style: dashed;
+    width: 100%;
+    margin: 0;
+}
+
+.transaction-detail-modal{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-y: auto;
+}
 
  /* Media Navbar */ 
 
