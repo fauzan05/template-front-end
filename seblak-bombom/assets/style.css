@@ -566,7 +566,7 @@ select:focus{
 }
 
 .modal-body-discount-wrapper{
-    max-height: 400px;
+    max-height: 350px;
     overflow-y: auto;
 }
 
@@ -645,6 +645,11 @@ select:focus{
     align-items: center;
     justify-content: start;
     overflow-y: auto;
+}
+
+.select-all{
+    height: 40px;
+    
 }
 
  /* Media Navbar */ 
