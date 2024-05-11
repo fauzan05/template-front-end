@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Seblak BomBom - Order List</title>
+    <title>Seblak BomBom - Daftar Pesanan</title>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                     <div href="" class="nav-item nav-link" id="cart"><i
-                            class="fa-solid fa-basket-shopping cursor-pointer"></i><a href=""
+                            class="fa-solid fa-cart-shopping cursor-pointer"></i><a href=""
                             class="cart-text-collapse text-decoration-none">Keranjang</a><span class="badge">5</span>
                         <div class="cart-wrapper">
                             <div class="d-flex justify-content-between">
@@ -141,9 +141,32 @@
         </nav>
     </div>
     <div class="container-xxl py-3">
-        <div class="container d-flex flex-column align-items-center justify-content-center my-5">
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-center my-5">
             <div class="row d-flex align-items-start justify-content-between w-100">
-                <div class="col-12">
+                <div class="col-2" style="position: -webkit-sticky !important; position: sticky !important; top: 20px;">
+                    <div
+                        class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
+                        <a href="" class="profile-simple text-decoration-none p-3 cursor-pointer">
+                            <img src="assets/image/songkang.png" alt="">
+                            <h5 class="ms-2 text-dark">John</h5>
+                        </a>
+                        <hr class="border border-5 mt-1 mb-3">
+                        <nav class="nav-customers g-0">
+                            <ul class="p-0 d-flex flex-column align-items-center justify-content-center">
+                                <li class="fw-normal list-none g-0"><a href=""
+                                        class="text-decoration-none text-dark active"><i
+                                            class="fa-regular fa-credit-card"></i> Transaksi</a></li>
+                                <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
+                                            class="fa-regular fa-bell"></i> Notifikasi</a></li>
+                                <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
+                                            class="fa-solid fa-cart-shopping"></i> Keranjang</a></li>
+                                <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
+                                            class="fa-solid fa-gear"></i> Pengaturan</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-10">
                     <div
                         class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
                         <h2 class="text-danger p-3 red-underline">Daftar Transaksi</h2>
@@ -204,7 +227,7 @@
                                         <div class="col-12 d-flex align-items-end justify-content-end p-3">
                                             <h6 class="text-danger cursor-pointer me-5" data-bs-toggle="modal"
                                                 data-bs-target="#transactionDetailModal">Lihat Detail Transaksi</h6>
-                                                <button class="btn btn-danger w-25">Pesan Lagi</button>
+                                            <button class="btn btn-danger w-25">Pesan Lagi</button>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +260,7 @@
                                         <div class="col-12 d-flex align-items-end justify-content-end p-3">
                                             <h6 class="text-danger cursor-pointer me-5" data-bs-toggle="modal"
                                                 data-bs-target="#transactionDetailModal">Lihat Detail Transaksi</h6>
-                                                <button class="btn btn-danger w-25">Pesan Lagi</button>
+                                            <button class="btn btn-danger w-25">Pesan Lagi</button>
                                         </div>
                                     </div>
                                 </div>
@@ -291,10 +314,11 @@
                         <h5 class="text-start">Detail Pesanan</h5>
                         <div class="row d-flex flex-column align-items-center justify-content-center w-100">
                             <!-- item-nya -->
-                            <div class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
+                            <div
+                                class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
                                 <div class="col-2 d-flex align-items-center justify-content-center">
-                                    <img src="assets/image/seblak-spesial.png"
-                                        class="rounded-sm image-product-checkout" alt="">
+                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
+                                        alt="">
                                 </div>
                                 <div class="col-7">
                                     <h5>Seblak Spesial</h5>
@@ -305,10 +329,11 @@
                                     <button class="btn btn-danger">Pesan Lagi</button>
                                 </div>
                             </div>
-                            <div class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
+                            <div
+                                class="col-12 p-2 my-2 border rounded-sm row d-flex align-items-center justify-content-between">
                                 <div class="col-2 d-flex align-items-center justify-content-center">
-                                    <img src="assets/image/seblak-spesial.png"
-                                        class="rounded-sm image-product-checkout" alt="">
+                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
+                                        alt="">
                                 </div>
                                 <div class="col-7">
                                     <h5>Seblak Spesial</h5>
@@ -321,36 +346,38 @@
                             </div>
                         </div>
                         <h5 class="text-start my-3">Info Pengiriman</h5>
-                            <div class="col-12">
-                                <p class="fw-normal my-2">Metode Pengiriman <span style="margin-left: 24px;">:</span> </p> 
-                                <p class="fw-normal my-2">Alamat <span style="margin-left: 114px;">:</span> </p>
-                                <p class="fw-normal my-2">Status <span style="margin-left: 121px;">:</span> <span class="text-success">Berhasil Diantar</span></p>
-                            </div>
-                            <h5 class="text-start my-3">Rincian Pembayaran</h5>
-                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                <p class="fw-normal my-2">Metode Pembayaran</p>
-                                <p class="fw-normal">Mandiri Virtual Account</p>
-                            </div>
-                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                <p class="fw-normal my-2">Total Harga (2 Barang)</p>
-                                <p class="fw-normal">Rp 30.000</p>
-                            </div>
-                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                <p class="fw-normal my-2">Total Ongkos Kirim</p>
-                                <p class="fw-normal">Rp 5.000</p>
-                            </div>
-                            <div class="col-12 d-flex align-items-center justify-content-between">
-                                <p class="fw-normal my-2">Potongan Diskon</p>
-                                <p class="fw-normal">Rp 5.000</p>
-                            </div>
-                            <div class="col-12 my-3 d-flex align-items-center justify-content-between">
-                                <h5 class="fw-bolder my-2">Total Belanja</h5>
-                                <h5 class="fw-bolder my-2">Rp 30.000</h5>
-                            </div> 
+                        <div class="col-12">
+                            <p class="fw-normal my-2">Metode Pengiriman <span style="margin-left: 24px;">:</span> </p>
+                            <p class="fw-normal my-2">Alamat <span style="margin-left: 114px;">:</span> </p>
+                            <p class="fw-normal my-2">Status <span style="margin-left: 121px;">:</span> <span
+                                    class="text-success">Berhasil Diantar</span></p>
+                        </div>
+                        <h5 class="text-start my-3">Rincian Pembayaran</h5>
+                        <div class="col-12 d-flex align-items-center justify-content-between">
+                            <p class="fw-normal my-2">Metode Pembayaran</p>
+                            <p class="fw-normal">Mandiri Virtual Account</p>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-between">
+                            <p class="fw-normal my-2">Total Harga (2 Barang)</p>
+                            <p class="fw-normal">Rp 30.000</p>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-between">
+                            <p class="fw-normal my-2">Total Ongkos Kirim</p>
+                            <p class="fw-normal">Rp 5.000</p>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-between">
+                            <p class="fw-normal my-2">Potongan Diskon</p>
+                            <p class="fw-normal">Rp 5.000</p>
+                        </div>
+                        <div class="col-12 my-3 d-flex align-items-center justify-content-between">
+                            <h5 class="fw-bolder my-2">Total Belanja</h5>
+                            <h5 class="fw-bolder my-2">Rp 30.000</h5>
+                        </div>
                     </div>
                     <div class="col-4 border rounded-sm d-flex g-0">
                         <div class="row d-flex flex-column align-items-center justify-content-between w-100 m-0">
-                            <button class="btn btn-success mt-5 w-75">Chat Penjual <i class="fa-brands fa-whatsapp"></i></button>
+                            <button class="btn btn-success mt-5 w-75">Chat Penjual <i
+                                    class="fa-brands fa-whatsapp"></i></button>
                             <img src="assets/image/seblak-img.png" class="w-100 g-0" alt="">
                         </div>
                     </div>
@@ -373,7 +400,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Kontak Kami
                     </h4>
-                    <p class="mb-2 fw-normal"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah, Indonesia</p>
+                    <p class="mb-2 fw-normal"><i class="fa-solid fa-location-dot"></i> 123 Kebumen, Jawa Tengah,
+                        Indonesia</p>
                     <p class="mb-2 fw-normal"><i class="fa-brands fa-whatsapp"></i> +62 8927 3237</p>
                     <p class="mb-2 fw-normal"><i class="fa-regular fa-envelope"></i></i> seblakbombom@mail.com</p>
                     <div class="row pt-2 gap-3">
@@ -394,7 +422,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-stroke section-title ff-secondary text-start text-danger fw-normal mb-4">Buletin
                     </h4>
-                    <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit quod aspernatur illo
+                    <p class="fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi sit
+                        quod aspernatur illo
                         inventore cumque doloribus libero, est rerum nesciunt id. Perferendis optio eos laborum quam.
                         Alias, tempore dolorum?</p>
                     <button class="btn btn-danger mt-3">Registrasi</button>

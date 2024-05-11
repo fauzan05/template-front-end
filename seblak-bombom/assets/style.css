@@ -648,9 +648,86 @@ select:focus{
 }
 
 .select-all{
-    height: 40px;
-    
+    height: 40px;  
 }
+.profile-simple{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+.profile-simple img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.list-none{
+    list-style: none;
+}
+
+.nav-customers ul li{
+   height: 55px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.nav-customers ul li a i{
+    margin-right: 10px;
+}
+
+.nav-customers ul li a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(243,244,245,255);
+    height: 35px;
+    width: 90%;
+    margin: 0;
+    border-radius: 6px;
+}
+
+.nav-customers ul li a:hover,
+.nav-customers ul li a:hover .nav-customers ul li a i{
+    background-color: var(--primary);
+    color: white !important;
+}
+
+.nav-customers ul li a.active{
+    background-color: var(--primary);
+    color: white !important;
+}
+
+.profile-simple:hover{
+    background-color: rgba(243,244,245,255);
+}
+
+.list-notification-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-item{
+    height: 100px;
+        background-color: rgba(243,244,245,255);
+        color: black;
+}
+
+.notification-item:hover{
+    background-color: var(--primary);
+    color: white !important;
+}
+
 
  /* Media Navbar */ 
 
