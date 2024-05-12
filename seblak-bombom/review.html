@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Seblak BomBom - Daftar Notifikasi</title>
+    <title>Seblak BomBom - Ulasan</title>
 </head>
 
 <body>
@@ -140,9 +140,9 @@
             </div>
         </nav>
     </div>
-    <div class="container-xxl py-3 d-flex flex-column align-items-center justify-content-center">
-        <div class="container-fluid d-flex flex-column align-items-center justify-content-center my-5">
-            <div class="row d-flex align-items-start justify-content-center w-100">
+    <div class="container-xxl py-3">
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-between my-5">
+            <div class="row d-flex align-items-start justify-content-between w-100">
                 <div class="col-2" style="position: -webkit-sticky !important; position: sticky !important; top: 20px;">
                     <div
                         class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
@@ -160,7 +160,8 @@
                                             class="fa-regular fa-bell"></i> Notifikasi</a></li>
                                 <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
                                             class="fa-solid fa-cart-shopping"></i> Keranjang</a></li>
-                                <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i class="fa-solid fa-star text-dark"></i> Ulasan</a></li>
+                                <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
+                                            class="fa-solid fa-star text-dark"></i> Ulasan</a></li>
                                 <li class="fw-normal list-none"><a href="" class="text-decoration-none text-dark"><i
                                             class="fa-solid fa-gear"></i> Pengaturan</a></li>
                             </ul>
@@ -170,44 +171,132 @@
                 <div class="col-10">
                     <div
                         class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
-                        <h2 class="text-danger p-3 red-underline">Daftar Notifikasi</h2>
-                        <div class="d-flex p-3 flex-row align-items-center justify-content-start">
-                            <h5 class="fw-normal mt-3 mb-4 me-3">Kategori</h5>
-                            <button class="btn btn-outline-danger mx-2">Transaksi</button>
-                            <button class="btn btn-outline-danger mx-2">Promo</button>
+                        <h2 class="text-danger p-3 red-underline">Ulasan</h2>
+                        <div class="d-flex align-items-center justify-content-around p-3">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h5 class="me-3">Pilih </h5>
+                                <button class="btn btn-outline-danger mx-2">Belum Diulas</button>
+                                <button class="btn btn-outline-danger mx-2">Ulasan Saya</button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h5 class="me-2">Filter</h5>
+                                <select class="form-select w-100" aria-label="select-menu">
+                                    <option selected>Semua Waktu</option>
+                                    <option value="2">7 Hari Terakhir</option>
+                                    <option value="1">Bulan Ini</option>
+                                    <option value="3">3 Bulan Terakhir</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="list-notification-wrapper">
-                            <a href=""
-                                class="col-12 p-3 notification-item border rounded-sm text-decoration-none h-auto my-1">
-                                <p class="fw-normal mb-2"><i class="fa-solid fa-percent"></i> Promo | 12:27</p>
-                                <h5>Godaan belanja apa lagi ini? 😱</h5>
-                                <p class="fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Reiciendis labore, excepturi facilis deserunt fugit asperiores ratione aspernatur
-                                    cumque officiis dolores? Esse atque magni vero sed labore dolorem accusamus sunt
-                                    maxime?</p>
-                            </a>
-                            <a href=""
-                                class="col-12 p-3 notification-item border rounded-sm text-decoration-none h-auto my-1">
-                                <p class="fw-normal mb-2"><i class="fa-solid fa-percent"></i> Promo | 12:27</p>
-                                <h5>Godaan belanja apa lagi ini? 😱</h5>
-                                <p class="fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Reiciendis labore, excepturi facilis deserunt fugit asperiores ratione aspernatur
-                                    cumque officiis dolores? Esse atque magni vero sed labore dolorem accusamus sunt
-                                    maxime?</p>
-                            </a>
-                            <a href=""
-                                class="col-12 p-3 notification-item border rounded-sm text-decoration-none h-auto my-1">
-                                <p class="fw-normal mb-2"><i class="fa-solid fa-percent"></i> Promo | 12:27</p>
-                                <h5>Godaan belanja apa lagi ini? 😱</h5>
-                                <p class="fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Reiciendis labore, excepturi facilis deserunt fugit asperiores ratione aspernatur
-                                    cumque officiis dolores? Esse atque magni vero sed labore dolorem accusamus sunt
-                                    maxime?</p>
-                            </a>
-                            <div class="mt-3"></div>
+                        <!-- Ulasan item -->
+                        <div class="my-3 col-11 border rounded-sm">
+                            <div class="d-flex align-items-center p-3 justify-content-between">
+                                <p class="fw-normal text-danger">INV/20240226/MPL/3759553371</p>
+                                <p class="fw-normal text-secondary">Pesanan diterima: 02 Mar 2024, 11:16</p>
+                            </div>
+                            <hr class="border border-5 w-100 m-0">
+                            <h5 class="fw-normal text-secondary p-3">Daftar Produk</h5>
+                            <!-- Review Item -->
+                            <div class="row d-flex flex-row g-2 justify-content-start align-items-start p-3 mb-2">
+                                <div class="col-6 d-flex align-items-center justify-content-around border rounded-sm">
+                                    <div class="col-2 d-flex align-items-center my-2">
+                                        <img src="assets/image/seblak-krupuk.jpeg"
+                                            class="rounded-sm image-product-checkout" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="col-12 d-flex align-items-center justify-content-between">
+                                            <h5 class="fw-normal fs-6">Seblak Kerupuk</h5>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between align-items-center mt-2">
+                                            <button class="btn btn-danger give-review-button">Beri Ulasan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex align-items-center justify-content-around border rounded-sm">
+                                    <div class="col-2 d-flex align-items-center my-2">
+                                        <img src="assets/image/seblak-krupuk.jpeg"
+                                            class="rounded-sm image-product-checkout" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="col-12 d-flex align-items-center justify-content-between">
+                                            <h5 class="fw-normal fs-6">Seblak Kerupuk</h5>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between align-items-center mt-2">
+                                            <button class="btn btn-danger give-review-button">Beri Ulasan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex align-items-center justify-content-around border rounded-sm">
+                                    <div class="col-2 d-flex align-items-center my-2">
+                                        <img src="assets/image/seblak-krupuk.jpeg"
+                                            class="rounded-sm image-product-checkout" alt="">
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="col-12 d-flex align-items-center justify-content-between">
+                                            <h5 class="fw-normal fs-6">Seblak Kerupuk</h5>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between align-items-center mt-2">
+                                            <div class="d-flex align-items-center justify-content-around">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-regular fa-star"></i>
+                                            </div>
+                                            <button class="btn btn-secondary">Lihat Ulasan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Give a Review Modal -->
+    <div class="modal fade" id="giveReviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Memberi Ulasan</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column align-items-center justify-content-center">
+                    <div class="my-5 d-flex flex-column review-form-wrapper">
+                        <div class="mb-3 star-widget" style="align-self: center;">
+                            <input type="radio" name="rate" id="rate-5">
+                            <label for="rate-5" class="fa fa-2x fa-reguler fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4">
+                            <label for="rate-4" class="fa fa-2x fa-reguler fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3">
+                            <label for="rate-3" class="fa fa-2x fa-reguler fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2">
+                            <label for="rate-2" class="fa fa-2x fa-reguler fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1">
+                            <label for="rate-1" class="fa fa-2x fa-reguler fa-star"></label>
+                            <header class="mt-5 mb-2 text-center"></header>
+                        </div>
+                        <form action="#">
+                            <div class="review-text-area">
+                                <textarea name="" id="" cols="40" placeholder="Tulis ulasanmu disini"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-danger w-100 mt-4" data-bs-target="#successAddReview" data-bs-toggle="modal">Simpan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Informasi Setelah Mengisi Review Modal -->
+    <div class="modal fade" id="successAddReview" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content d-flex flex-column align-items-center justify-content-center">
+                <img src="assets/image/tick.png" alt="" class="modal-img">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Berhasil Menambahkan Ulasan Anda</h1>
+                </div>
+                <button type="button" class="btn btn-danger w-50 my-3" data-bs-dismiss="modal">OK</button>
             </div>
         </div>
     </div>
@@ -271,6 +360,8 @@
             </div>
         </div>
     </div>
+    <script src="assets/script.js"></script>
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

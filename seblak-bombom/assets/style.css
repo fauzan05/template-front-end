@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6,p{
     --primary: #dc3545;
     --light: #F1F8FF;
     --dark: #0F172B;
+    --grey: rgba(243,244,245,255);
     /* transition */
     --tran-02: all 0.2s ease;
     --tran-03: all 0.3s ease;
@@ -280,7 +281,6 @@ select:focus{
 .search-form::placeholder{
     color: white !important;
 }
-
 
 .notification-wrapper{
     display: none;
@@ -687,12 +687,15 @@ select:focus{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: rgba(243,244,245,255);
     height: 35px;
     width: 90%;
     margin: 0;
     border-radius: 6px;
+}
+.nav-customers ul li a i{
+    margin-left: 12px;
 }
 
 .nav-customers ul li a:hover,
@@ -728,6 +731,115 @@ select:focus{
     color: white !important;
 }
 
+.fa-star{
+    color: orange;
+}
+
+.average-stars{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.average-stars:hover{
+    background-color: rgba(243,244,245,255);
+}
+
+.review-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-item img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.display-review-button{
+    transition: var(--tran-03);
+}
+
+.display-review-button:hover{
+    transform: translateY(-3px);
+}
+
+/* #displayReview{
+    transition: transform 0.3s ease;
+} */
+
+#displayReview.hide{
+    display: none !important;
+}
+
+.star-widget input{
+    display: none;
+}
+
+.star-widget label{
+    color: var(--grey);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: right;
+}
+
+.star-widget input:not(:checked) ~ label:hover,
+.star-widget input:not(:checked) ~ label:hover ~ label{
+    color: orange;
+}
+
+.star-widget input:checked ~ label {
+    color: orange;
+}
+
+.review-form-wrapper form header{
+    width: 100%;
+    font-size: 15px;
+    color: var(--primary);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-text-area textarea{
+    border: 2px solid var(--grey);
+    font-size: 15px !important;
+    font-weight: 500;
+    height: 100px;
+    border-radius: 5px;
+    resize: none;
+}
+.review-text-area textarea:focus{
+    outline: none;
+    border: 2px solid var(--primary);
+}
+
+#rate-1:checked ~ header:before{
+    content: "Sangat Buruk 😭";
+}
+#rate-2:checked ~ header:before{
+    content: "Buruk 🥲";
+}
+#rate-3:checked ~ header:before{
+    content: "Cukup 😁";
+}
+#rate-4:checked ~ header:before{
+    content: "Baik 😊";
+}
+#rate-5:checked ~ header:before{
+    content: "Sangat Baik 🤩";
+}
 
  /* Media Navbar */ 
 

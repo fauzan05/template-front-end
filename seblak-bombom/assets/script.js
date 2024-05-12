@@ -73,7 +73,60 @@ if (addNoteButton && addNoteInput) {
 }
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
-// window.onload = function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('transactionDetailModal'));
-//     myModal.show();
-// };
+window.onload = function() {
+    var myModal = new bootstrap.Modal(document.getElementById('giveReviewModal'));
+    myModal.show();
+};
+
+// Deskripsi
+const showDescriptionButtons = document.getElementsByClassName("show-description")
+if (showDescriptionButtons) {
+    Array.from(showDescriptionButtons).forEach((showDescriptionButton, index) => {
+        showDescriptionButton.addEventListener("click", () => {
+            let showDescriptionModal = new bootstrap.Modal(document.getElementById("showDescriptionModal"))
+            showDescriptionModal.show()
+        })
+    })
+}
+
+// Review
+const showRewiewButtons = document.getElementsByClassName("average-stars")
+if (showRewiewButtons) {
+    Array.from(showRewiewButtons).forEach(showReviewButton => {
+        showReviewButton.addEventListener("click", () => {
+            let showReviewModal = new bootstrap.Modal(document.getElementById("showReviewModal"))
+            showReviewModal.show()
+        })
+    })
+}
+
+// hide/show button reviews rating
+const displayReviewButton = document.getElementById("displayReviewButton")
+const displayReview = document.getElementById("displayReview")
+if (displayReviewButton && displayReview) {
+    let state = Boolean(true);
+    displayReviewButton.addEventListener("click", () => {
+        if (state) {
+            // jika true / terbuka 
+            displayReview.classList.add("hide");
+            displayReviewButton.innerHTML = `Tampilkan <i class="fa-solid fa-angle-down"></i>`
+            state = !state;
+        } else if (!state) {
+            // jika false / hide
+            displayReview.classList.remove("hide");
+            displayReviewButton.innerHTML = `Sembunyikan <i class="fa-solid fa-angle-up"></i>`
+            state = !state
+        }
+       
+    })
+}
+
+const giveReviewButton = document.getElementsByClassName("give-review-button")
+if (giveReviewButton) {
+    Array.from(giveReviewButton).forEach(giveReviewButton => {
+        giveReviewButton.addEventListener("click", () => {
+            let showReviewModal = new bootstrap.Modal(document.getElementById("giveReviewModal"))
+            showReviewModal.show()
+        })
+    })
+}
