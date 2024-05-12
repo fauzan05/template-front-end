@@ -74,7 +74,7 @@ if (addNoteButton && addNoteInput) {
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
 // window.onload = function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('giveReviewModal'));
+//     var myModal = new bootstrap.Modal(document.getElementById('deleteAddressModal'));
 //     myModal.show();
 // };
 
@@ -126,6 +126,26 @@ if (giveReviewButton) {
     Array.from(giveReviewButton).forEach(giveReviewButton => {
         giveReviewButton.addEventListener("click", () => {
             let showReviewModal = new bootstrap.Modal(document.getElementById("giveReviewModal"))
+            showReviewModal.show()
+        })
+    })
+}
+
+// Alamat
+const editAddressButtons = document.getElementsByClassName("edit-address")
+const editAddressModal = document.getElementById("editAddressModal")
+const deleteAddressButtons = document.getElementsByClassName("delete-address")
+if (editAddressButtons && editAddressModal || deleteAddressButtons) {
+    Array.from(editAddressButtons).forEach(editAddressButton => {
+        editAddressButton.addEventListener("click", () => {
+            let showReviewModal = bootstrap.Modal.getOrCreateInstance('#editAddressModal')
+            showReviewModal.show()
+        })
+    })
+
+    Array.from(deleteAddressButtons).forEach(deleteAddressButton => {
+        deleteAddressButton.addEventListener("click", () => {
+            let showReviewModal = bootstrap.Modal.getOrCreateInstance('#deleteAddressModal')
             showReviewModal.show()
         })
     })
