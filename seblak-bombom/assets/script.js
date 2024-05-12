@@ -73,10 +73,10 @@ if (addNoteButton && addNoteInput) {
 }
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
-window.onload = function() {
-    var myModal = new bootstrap.Modal(document.getElementById('giveReviewModal'));
-    myModal.show();
-};
+// window.onload = function() {
+//     var myModal = new bootstrap.Modal(document.getElementById('giveReviewModal'));
+//     myModal.show();
+// };
 
 // Deskripsi
 const showDescriptionButtons = document.getElementsByClassName("show-description")
