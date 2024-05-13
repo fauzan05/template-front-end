@@ -184,6 +184,63 @@ const outResetPasswordModal = document.getElementById("outResetPasswordModal");
 if (outResetPasswordButton && outResetPasswordModal) {
     outResetPasswordButton.addEventListener("click", () => {
         let showoutResetPasswordModal = bootstrap.Modal.getOrCreateInstance('#outResetPasswordModal')
-            showoutResetPasswordModal.show()
+        showoutResetPasswordModal.show()
     })
 }
+
+const sendVerificationCodeButton = document.getElementById("sendVerificationCode");
+const countTimer = document.getElementById("countTimer");
+const infoSendVerificationCode = document.getElementById("infoSendVerificationCode");
+if (sendVerificationCodeButton) {
+    sendVerificationCodeButton.addEventListener("click", () => {
+        startCountdown()
+    });
+
+    function startCountdown() {
+        let x; // Variabel untuk menyimpan ID interval
+        let twoMinutesLater; // Variabel untuk menyimpan waktu dua menit setelah tombol pertama kali ditekan
+        // Get today's date and time
+        let now = new Date().getTime();
+
+        // Set the date we're counting down to, hanya dihitung saat pertama kali tombol ditekan
+        if (!twoMinutesLater) {
+            twoMinutesLater = new Date(now + 1 * 10 * 1000);
+        }
+
+        // Update the countdown every 1 second
+        x = setInterval(function () {
+            // Get today's date and time
+            let now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            let distance = twoMinutesLater - now;
+
+            // Time calculations for minutes and seconds
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="countTimer"
+            countTimer.innerHTML = minutes + " menit " + seconds + " detik ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                countTimer.innerHTML = "";
+                infoSendVerificationCode.innerHTML = 'Tidak menerima kode? <span id="sendVerificationCode" class="text-danger cursor-pointer">Kirim Ulang</span>';
+                twoMinutesLater = new Date(now + 1 * 10 * 1000);; // Reset variabel twoMinutesLater agar bisa dihitung kembali saat tombol ditekan lagi
+                // console.log(sendVerificationCodeButton.innerHTML)
+                // console.log(twoMinutesLater)
+                sendVerificationCodeButton.addEventListener("click", () => {
+                    console.log("terpanggil")
+                });
+            } else {
+                infoSendVerificationCode.innerHTML = "Tunggu hingga waktu selesai, baru kemudian kirim email lagi";
+            }
+        }, 1000);
+    }
+
+    // Panggil startCountdown saat halaman dimuat pertama kali
+    // startCountdown();
+}
+
+
