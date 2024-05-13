@@ -135,7 +135,8 @@ if (giveReviewButton) {
 const editAddressButtons = document.getElementsByClassName("edit-address")
 const editAddressModal = document.getElementById("editAddressModal")
 const deleteAddressButtons = document.getElementsByClassName("delete-address")
-if (editAddressButtons && editAddressModal || deleteAddressButtons) {
+const selectedMainAddressButtons = document.getElementsByClassName("select-main-address")
+if (editAddressButtons && editAddressModal || deleteAddressButtons || selectedMainAddressButtons) {
     Array.from(editAddressButtons).forEach(editAddressButton => {
         editAddressButton.addEventListener("click", () => {
             let showReviewModal = bootstrap.Modal.getOrCreateInstance('#editAddressModal')
@@ -146,6 +147,13 @@ if (editAddressButtons && editAddressModal || deleteAddressButtons) {
     Array.from(deleteAddressButtons).forEach(deleteAddressButton => {
         deleteAddressButton.addEventListener("click", () => {
             let showReviewModal = bootstrap.Modal.getOrCreateInstance('#deleteAddressModal')
+            showReviewModal.show()
+        })
+    })
+
+    Array.from(selectedMainAddressButtons).forEach(selectedMainAddressButton => {
+        selectedMainAddressButton.addEventListener("click", () => {
+            let showReviewModal = new bootstrap.Modal(document.getElementById("selectMainAddress"))
             showReviewModal.show()
         })
     })
