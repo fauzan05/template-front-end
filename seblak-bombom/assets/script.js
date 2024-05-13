@@ -74,7 +74,7 @@ if (addNoteButton && addNoteInput) {
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
 // window.onload = function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('outResetPasswordModal'));
+//     var myModal = new bootstrap.Modal(document.getElementById('successResetPasswordModal'));
 //     myModal.show();
 // };
 
