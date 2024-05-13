@@ -951,6 +951,22 @@ input[type="password"]:focus{
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+.verification-code-input{
+    height: 80px;
+    font-size: 40px;
+    width: 150px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.verification-code-input:focus{
+    outline: none !important;
+    /* border: 1px solid var(--primary); */
+}
+
  /* Media Navbar */ 
 
  @media (max-width: 990px) {
