@@ -244,3 +244,72 @@ if (sendVerificationCodeButton) {
 }
 
 
+let mapOrder = document.getElementById("mapOrder");
+if (mapOrder) {
+    let
+        longitude,
+        latitude,
+        currentLonLat,
+        centralLonLat,
+        distance,
+        showDistance,
+        showOngkir;
+
+    mapOrder = L.map('mapOrder', { zoomControl: false }).setView([-7.666180528826785, 109.64169625691922], 15);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mapOrder);
+    let marker = L.marker([-7.666180528826785, 109.64169625691922]).addTo(mapOrder)
+    // lokasi tokonya
+    centralLonLat = marker.getLatLng()
+    L.control.locate({
+        keepCurrentZoomLevel: true
+    }).addTo(mapOrder);
+    mapOrder.on('locationfound', onLocationFound);
+
+    function onLocationFound(e) {
+        const lon = e.latlng.lng;
+        const lat = e.latlng.lat;
+        longitude = document.getElementById("showLongitude");
+        latitude = document.getElementById("showLatitude");
+        longitude.innerHTML = lon
+        latitude.innerHTML = lat
+        currentLonLat = e.latlng;
+        showDistance = document.getElementById("showDistance");
+        distance = mapOrder.distance(currentLonLat, centralLonLat) / 1000;
+        showDistance.innerHTML = distance.toFixed(1)
+        // ongkir
+        showOngkir = document.getElementById("showOngkir");
+        showOngkir.innerHTML = 5000 * distance.toFixed(1)
+    }
+
+    const getLonLatButton = document.getElementById("getLonLat");
+    getLonLatButton.addEventListener("click", () => {
+        console.log("Longitude : ", longitude)
+        console.log("Latitude : ", latitude)
+    })
+}
+
+const deliveryLabel = document.getElementById("deliveryLabel")
+const takeAwayLabel = document.getElementById("takeAwayLabel")
+if (deliveryLabel && takeAwayLabel) {
+    const showCurrentLocation = document.getElementById("showCurrentLocation")
+    takeAwayLabel.addEventListener("click", () => {
+        showCurrentLocation.classList.add("d-none")
+    })
+    deliveryLabel.addEventListener("click", () => {
+       showCurrentLocation.classList.remove("d-none")
+    })
+}
+
+const copyButtons = document.getElementsByClassName("fa-copy")
+const discountCode = document.getElementsByClassName("discount-code")
+const copyCodeSuccessInfos = document.getElementsByClassName("copy-code-success-info")
+if (copyButtons && discountCode) {
+    Array.from(copyButtons).forEach((copyButton, index) => {
+        copyButton.addEventListener("click",() => {
+            navigator.clipboard.writeText(discountCode[index].innerText)
+            copyCodeSuccessInfos[index].classList.remove("d-none")
+        })
+    })
+}

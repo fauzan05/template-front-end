@@ -11,6 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="assets/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="assets/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.js"></script>
     <title>Seblak BomBom - Pemesanan</title>
 </head>
 
@@ -224,13 +231,26 @@
                         <div class="col-11">
                             <h5>Pengiriman</h5>
                             <div class="delivery-option-wrapper my-4">
-                                <input type="radio" name="isDelivery" class="delivery-option" id="delivery" checked>
-                                <label for="delivery" class="delivery-label">Diantar</label>
+                                <input type="radio" name="isDelivery" class="delivery-option" id="delivery">
+                                <label for="delivery" class="delivery-label" id="deliveryLabel">Diantar</label>
                                 <input type="radio" name="isDelivery" class="delivery-option" id="takeAway">
-                                <label for="takeAway" class="take-away-label">Ambil Sendiri</label>
+                                <label for="takeAway" class="take-away-label" id="takeAwayLabel">Ambil Sendiri</label>
                             </div>
-                            <div class="border border-danger rounded-sm">
-                                <h5>Bagian Alamat dan Lokasi Terkini</h5>
+                            <div id="showCurrentLocation" class="d-flex flex-column align-items-start justify-content-center">
+                                <h5 class="py-3">Gunakan Lokasi Terkini</h5>
+                                <div class="col-lg-6 col-sm-12 rounded" id="mapOrder"></div>
+                                <button id="getLonLat" class="btn w-75 btn-danger align-self-center my-4">Dapatkan
+                                    Informasi Jarak</button>
+                                <div class="border border-danger rounded-sm w-100 d-flex mb-4">
+                                    <div class="p-3 d-flex flex-column col-6">
+                                        <p class="fw-normal my-1">Longitude : <span id="showLongitude" class="fw-normal">-</span></p>
+                                        <p class="fw-normal my-1">Latitude : <span id="showLatitude" class="fw-normal">-</span></p>
+                                    </div>
+                                    <div class="p-3 d-flex col-6 d-flex flex-column">
+                                        <p class="fw-normal my-1">Jarak : <span id="showDistance" class="fw-normal">0</span> Kilometer</p>
+                                        <p class="fw-normal my-1">Total Ongkir : Rp <span id="showOngkir" class="fw-normal">0</span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -302,8 +322,8 @@
                     <div class="modal-body-discount">
                         <div class="col-11 border rounded-sm my-2">
                             <h5 class="fw-bolder p-3">Diskon Sebelas Sebelas</h5>
-                            <h5 class="ms-3">Kode : <span class="text-danger">SEBLAK01#</span> <i
-                                    class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
+                            <h5 class="ms-3">Kode : <span class="text-danger discount-code">SEBLAK01#</span> <i
+                                    class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil disalin!</span></h5>
                             <p class="mx-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Consequuntur ipsa reiciendis aliquid quasi distinctio ut illum debitis asperiores rerum.
                                 Repellendus impedit consequuntur itaque odit laudantium expedita deserunt temporibus
@@ -313,8 +333,8 @@
                     <div class="modal-body-discount">
                         <div class="col-11 border rounded-sm my-2">
                             <h5 class="fw-bolder p-3">Diskon Sebelas Sebelas</h5>
-                            <h5 class="ms-3">Kode : <span class="text-danger">SEBLAK01#</span> <i
-                                    class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
+                            <h5 class="ms-3">Kode : <span class="text-danger discount-code">SEBLAK01#</span> <i
+                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil disalin!</span></h5>
                             <p class="mx-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Consequuntur ipsa reiciendis aliquid quasi distinctio ut illum debitis asperiores rerum.
                                 Repellendus impedit consequuntur itaque odit laudantium expedita deserunt temporibus
@@ -387,7 +407,6 @@
     </div>
     <script src="assets/script.js"></script>
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
