@@ -74,7 +74,7 @@ if (addNoteButton && addNoteInput) {
 
 // digunakan agar modal selalu aktif tanpa harus ditekan terlebih dahulu
 // window.onload = function() {
-//     var myModal = new bootstrap.Modal(document.getElementById('deleteAddressModal'));
+//     var myModal = new bootstrap.Modal(document.getElementById('outResetPasswordModal'));
 //     myModal.show();
 // };
 
@@ -117,7 +117,7 @@ if (displayReviewButton && displayReview) {
             displayReviewButton.innerHTML = `Sembunyikan <i class="fa-solid fa-angle-up"></i>`
             state = !state
         }
-       
+
     })
 }
 
@@ -156,5 +156,34 @@ if (editAddressButtons && editAddressModal || deleteAddressButtons || selectedMa
             let showReviewModal = new bootstrap.Modal(document.getElementById("selectMainAddress"))
             showReviewModal.show()
         })
+    })
+}
+
+// Input Password
+// Mendapatkan elemen input password dan tombol show password
+const passwordInputs = document.getElementsByClassName('password-input');
+const showPasswordButtons = document.getElementsByClassName('show-password-button');
+if (passwordInputs && showPasswordButtons) {
+    Array.from(showPasswordButtons).forEach((showPasswordButton, index) => {
+        showPasswordButton.innerHTML = '<i class="fa-solid fa-eye-slash"></i>'
+        showPasswordButton.addEventListener("click", () => {
+            if (passwordInputs[index].type === 'password') {
+                passwordInputs[index].type = 'text';
+                showPasswordButton.innerHTML = '<i class="fa-solid fa-eye"></i>'
+            } else {
+                passwordInputs[index].type = 'password';
+                showPasswordButton.innerHTML = '<i class="fa-solid fa-eye-slash"></i>'
+            }
+        })
+    })
+}
+
+
+const outResetPasswordButton = document.getElementById("outResetPassword")
+const outResetPasswordModal = document.getElementById("outResetPasswordModal");
+if (outResetPasswordButton && outResetPasswordModal) {
+    outResetPasswordButton.addEventListener("click", () => {
+        let showoutResetPasswordModal = bootstrap.Modal.getOrCreateInstance('#outResetPasswordModal')
+            showoutResetPasswordModal.show()
     })
 }
