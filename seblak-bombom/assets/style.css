@@ -946,6 +946,9 @@ input[type="password"]:focus{
 
 
  @media (max-width: 990px) {
+    .image-section-login{
+        display: none;
+    }
     .nav-link{
         text-align: center;
         margin-top: 15px;
