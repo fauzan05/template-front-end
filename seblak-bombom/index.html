@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@
 
 <body>
     <div class="container-xxl hero-header position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 px-lg-5 py-lg-2">
             <a href="" class="navbar-brand mt-3 text-decoration-none">
                 <h1 class="m-0 title-name-app text-white">
                     Seblak Bombom
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div href="" class="nav-item nav-link cursor-pointer" id="user"><i class="fa-solid fa-user"></i>
-                        <p class="ms-1 text-ellipsis text-transform-none fw-bolder" style="max-width: 70px;">John Doe
+                        <p class="ms-1 text-ellipsis text-transform-none fw-bolder" style="max-width: 80px;">John Doe
                         </p>
                         <div
                             class="user-wrapper d-flex flex-column align-items-center text-center justify-content-center">
@@ -172,6 +172,9 @@
     </div>
     <!-- Service Section Start -->
     <div class="container-xxl py-5">
+        <i id="btnToUp" class="fa-3x fa-solid fa-chevron-up"></i>
+        <a href="https://wa.me/?text=Halo,%20saya%20ingin%20menanyakan%20tentang%20stok%20apakah%20semuanya%20tersedia?"
+            class="text-decoration-none fa-3x fa-brands fa-whatsapp whatsapp-btn"></a>
         <div class="container d-flex flex-column align-items-center justify-content-between mb-5">
             <h3 class="red-underline mb-4">Kenapa harus kami?</h3>
             <div class="row d-flex align-items-start justify-content-between g-4">
@@ -228,11 +231,11 @@
         <div class="container d-flex flex-column align-items-center justify-content-between mb-5">
             <h3 class="red-underline mb-4">Kode Promo</h3>
             <!-- <h5>-- Belum Tersedia <i class="fa-solid fa-face-sad-tear"></i> --</h5> -->
-            <div class="row d-flex justify-content-around discount-container">
+            <div class="row d-flex justify-content-around">
                 <div
                     class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
-                    <div class="discount-item rounded pt-3">
-                        <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
+                    <div class="text-bg-danger discount-item rounded pt-3">
+                        <h5>Kode : <span class="text-light">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
                         <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -242,8 +245,8 @@
                 </div>
                 <div
                     class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
-                    <div class="discount-item rounded pt-3">
-                        <h5>Kode : <span class="text-danger">SEBLAK01#</span> <i
+                    <div class="text-bg-danger discount-item rounded pt-3">
+                        <h5>Kode : <span class="text-light">SEBLAK01#</span> <i
                                 class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
                         <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -405,10 +408,13 @@
         </div>
         <div class="container d-flex flex-column align-items-center justify-content-center my-5">
             <h2 class="red-underline my-5">Lokasi Kami</h2>
-            <div class="row d-flex align-items-center justify-content-between w-100">
-                <div class="col-lg-6 col-sm-12 rounded" id="mapIndex"></div>
-                <div class="col-lg-6 col-sm-12 d-flex align-items-center justify-content-center">
-                    <p class="fw-normal text-start w-75"><i class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero soluta, nostrum corporis quibusdam accusantium ea ex facilis ullam ipsa dignissimos doloremque asperiores provident quod cum fugit velit! Vel, distinctio adipisci?</p>
+            <div class="row d-flex align-items-center justify-content-center w-100 gap-1">
+                <div class="col-lg-6 col-sm-12 rounded col-md-5 mb-3" id="mapIndex"></div>
+                <div class="col-lg-6 col-sm-12 col-md-5 row justify-content-center m-auto">
+                    <p class="fw-normal text-start w-75 text-sm-center text-md-center text-lg-start"><i class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit
+                        amet consectetur adipisicing elit. Vero soluta, nostrum corporis quibusdam accusantium ea ex
+                        facilis ullam ipsa dignissimos doloremque asperiores provident quod cum fugit velit! Vel,
+                        distinctio adipisci?</p>
                 </div>
             </div>
         </div>
@@ -488,6 +494,8 @@
             </div>
         </div>
     </div>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/lib/easing/easing.min.js"></script>
     <script src="assets/script.js"></script>
     <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script>

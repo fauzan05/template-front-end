@@ -118,9 +118,7 @@ select:focus{
     height: 200px;
     margin: 50px;
     border-radius: 10px;
-    background: #fff;
     float: left;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -597,8 +595,7 @@ select:focus{
     width: 250px;
     height: 32px;
     border-radius: 6px;
-    border: none;
-    
+    border: none; 
 }
 
 .search-bar-wrapper input:focus{
@@ -979,6 +976,53 @@ input[type="password"]:focus{
 #mapOrder{
     height: 350px;
     width: 620px;
+}
+
+.whatsapp-btn{
+    position: fixed; /* Tetap di posisi yang sama */
+    bottom: 20px; /* Jarak dari bawah halaman */
+    right: 30px; /* Jarak dari sisi kanan halaman */
+    z-index: 10; /* Pastikan tombol berada di atas konten lainnya */
+    border: none; /* Tanpa border */
+    outline: none; /* Tanpa outline */
+    background-color: rgba(37,211,102,255); /* Warna background */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Menjadi pointer saat hover */
+    border-radius: 50%; /* Sudut membulat */
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;
+}
+
+.whatsapp-btn:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#btnToUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Tetap di posisi yang sama */
+    bottom: 100px; /* Jarak dari bawah halaman */
+    right: 33px; /* Jarak dari sisi kanan halaman */
+    z-index: 10; /* Pastikan tombol berada di atas konten lainnya */
+    border: none; /* Tanpa border */
+    outline: none; /* Tanpa outline */
+    background-color: var(--primary); /* Warna background */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Menjadi pointer saat hover */
+    border-radius: 10px; /* Sudut membulat */
+    height: 55px;
+    width: 55px;
+    filter: opacity(0.2);
+}
+
+#btnToUp:hover{
+    filter: opacity(1);
 }
 
  /* Media Navbar */ 

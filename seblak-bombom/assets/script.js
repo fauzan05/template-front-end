@@ -313,3 +313,27 @@ if (copyButtons && discountCode) {
         })
     })
 }
+   
+
+
+
+$(document).ready(function() {
+
+    $('#btnToUp').hide();
+
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#btnToUp').fadeIn('slow');
+        } else {
+            $('#btnToUp').fadeOut('slow');
+        }
+        });
+        $('#btnToUp').click(function () {
+            // console.log("DIKLIK")
+            $('html, body').animate({scrollTop: 0}, 100, 'easeInOutExpo');
+            return false;
+        });
+    
+});
+
