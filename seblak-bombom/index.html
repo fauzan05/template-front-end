@@ -37,105 +37,122 @@
                     <a href="" class="nav-item nav-link">Menu</a>
                     <a href="" class="nav-item nav-link">Layanan</a>
                     <a href="" class="nav-item nav-link">Tentang</a>
-                    <div class="nav-item nav-link" id="searchForm"><i
-                            class="fa-solid fa-magnifying-glass cursor-pointer">
-                            <div class="search-form-wrapper cursor-pointer">
-                                <input class="search-form p-2" type="text" placeholder="Cari...">
-                            </div>
-                        </i>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer" id="searchIcon" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end border p-0" id="searchDropdown" style="z-index: 99999 !important;">
+                            <li>
+                                <input class="search-form border border-danger" type="text" placeholder="Cari...">
+                            </li>
+                        </ul>
                     </div>
-                    <div class="nav-item nav-link" id="notification"><i class="fa-solid fa-bell cursor-pointer"></i><a
-                            href="" class="text-decoration-none notification-text-collapse">Notifikasi</a>
-                        <span class="badge">5</span>
-                        <div class="notification-wrapper">
-                            <p class="text-start text-capitalize p-1">Notifikasi</p>
-                            <div class="notification-wrapper-inside">
-                                <a href="" class="notification cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <i class="fa-solid fa-motorcycle"></i>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
-                                            <p
-                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
-                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
-                                                cupiditate dicta recusandae autem?</p>
-                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
-                                                yang lalu</p>
-                                        </div>
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <span class="dot"></span>
-                                        </div>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-bell cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end notification-menu p-3" style="z-index: 99999 !important;">
+                            <li>
+                                <div class="cart-header d-flex justify-content-start align-items-center">
+                                    <h5 class="fw-light">Notifikasi</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex justify-content-between mt-2 px-3 g-0 m-0">
+                                    <div class="text-center cursor-pointer red-underline">Transaksi</div>
+                                    <div class="text-center cursor-pointer p-0 g-0">Update</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex align-items-center justify-content-between mt-3 w-100">
+                                    <span class="fw-normal">Pembelian</span>
+                                    <span class="fw-light text-danger">Lihat Semua</span>
+                                </div>
+                                <div class="my-3 text-center">
+                                    <span class="fw-light border border-danger rounded p-2">Menunggu Pembayaran</span>
+                                </div>
+                                <div class="row mt-3 justify-content-around p-3">
+                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-clock text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Menunggu Konfirmasi</span>
                                     </div>
-                                </a>
-                                <a href="" class="notification cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <i class="fa-solid fa-motorcycle"></i>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="m-0 text-transform-none">Lorem Ipsum</p>
-                                            <p
-                                                class="m-0 text-transform-none fs-smaller fw-lighter truncate text-justify">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
-                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
-                                                cupiditate dicta recusandae autem?</p>
-                                            <p class="m-0 text-transform-none fs-smaller fw-lighter text-danger">5 Menit
-                                                yang lalu</p>
-                                        </div>
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <span class="dot"></span>
-                                        </div>
+                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-fire-burner text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Pesanan Diproses</span>
                                     </div>
-                                </a>
-                            </div>
-                            <a href="" class="see-notification-all text-decoration-none">
-                                <p class="text-center text-capitalize p-1">Lihat Semua</p>
-                            </a>
-                        </div>
+                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-motorcycle text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sedang Dikirim</span>
+                                    </div>
+                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-location-dot text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sampai Tujuan</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div href="" class="nav-item nav-link" id="cart"><i
-                            class="fa-solid fa-cart-shopping cursor-pointer"></i><a href=""
-                            class="cart-text-collapse text-decoration-none">Keranjang</a><span class="badge">5</span>
-                        <div class="cart-wrapper">
-                            <div class="d-flex justify-content-between">
-                                <p class="text-start text-capitalize p-1">Keranjang</p>
-                                <a href=""
-                                    class="text-start text-decoration-none fw-light text-danger text-capitalize p-1 cursor-pointer">Lihat
-                                    Semua</a>
-                            </div>
-                            <div class="cart-wrapper-inside">
-                                <a href="" class="cart-item cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-3 d-flex flex-column align-items-center justify-content-center">
-                                            <img src="assets/image/seblak-ceker.jpeg" alt=""
-                                                class="image-cart-size rounded">
-                                        </div>
-                                        <div class="col-4 d-flex flex-column justify-content-center">
-                                            <p class="text-transform-none p-2 fs-6 fw-bolder truncate">Seblak Ceker</p>
-                                        </div>
-                                        <div class="col-5 d-flex flex-column align-items-center justify-content-center">
-                                            <h6 class="text-transform-none">2 x Rp 15000</h6>
-                                        </div>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-cart-shopping cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end cart-menu p-3" style="z-index: 99999 !important;">
+                            <li>
+                                <div class="cart-header d-flex justify-content-between align-items-center">
+                                    <h5 class="fw-light">Keranjang (10)</h5>
+                                    <a href="#" class="text-danger">Lihat semua</a>
+                                </div>
+                            </li>
+                            <div class="cart-items-wrapper">
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-ceker.jpeg" class="cart-image rounded" alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">Mesin penetas telur otomatis</p>
+                                        <small class="fw-light">PAKING KAYU BOX</small>
                                     </div>
-                                </a>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp410.000</p>
+                                        <small class="text-decoration-line-through">Rp550.000</small>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-foto-1.png" class="cart-image rounded" alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">GUNINCO SUKULEN Tanaman</p>
+                                        <small class="fw-light">NO 2</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp15.200</p>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded" alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
+                                        <small class="fw-light">Dodge Black</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp125.000</p>
+                                        <small class="text-decoration-line-through">Rp250.000</small>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded" alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
+                                        <small class="fw-light">Dodge Black</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp125.000</p>
+                                        <small class="text-decoration-line-through">Rp250.000</small>
+                                    </div>
+                                </li>
                             </div>
-                        </div>
+                        </ul>
                     </div>
-                    <div href="" class="nav-item nav-link cursor-pointer" id="user"><i class="fa-solid fa-user"></i>
-                        <p class="ms-1 text-ellipsis text-transform-none fw-bolder" style="max-width: 80px;">John Doe
-                        </p>
-                        <div
-                            class="user-wrapper d-flex flex-column align-items-center text-center justify-content-center">
-                            <a href="" class="text-decoration-none text-transform-none user-list my-1">Masuk</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Daftar</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Akun</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Pesanan</a>
+                    <div class="dropdown mt-2 mx-3">
+                        <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user cursor-pointer"></i>
+                            <span class="fw-normal">John Doe</span>
                         </div>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
                     </div>
                     <div class="search-form-collapse cursor-pointer mb-3">
                         <form action="">
@@ -235,8 +252,8 @@
                 <div
                     class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
                     <div class="text-bg-danger discount-item rounded pt-3">
-                        <h5>Kode : <span class="text-light">SEBLAK01#</span> <i
-                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
+                        <h5>Kode : <span class="text-light discount-code">SEBLAK01#</span> <i
+                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer" data-bs-toggle="popover" data-bs-content="Berhasil menyalin kode diskon!"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
                         <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Rerum eius
@@ -246,8 +263,8 @@
                 <div
                     class="col-lg-3 col-md-5 col-sm-6 mx-3 fadeInUp d-flex flex-column align-items-center justify-content-center">
                     <div class="text-bg-danger discount-item rounded pt-3">
-                        <h5>Kode : <span class="text-light">SEBLAK01#</span> <i
-                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i></h5>
+                        <h5>Kode : <span class="text-light discount-code">SEBLAK01#</span> <i
+                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer" data-bs-toggle="popover" data-bs-content="Berhasil menyalin kode diskon!"></i></h5>
                         <p>Periode : 1 Jan 2024 - 5 Jan 2024</p>
                         <p class="text-center m-3 fw-normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                             Rerum eius
@@ -411,7 +428,8 @@
             <div class="row d-flex align-items-center justify-content-center w-100 gap-1">
                 <div class="col-lg-6 col-sm-12 rounded col-md-5 mb-3" id="mapIndex"></div>
                 <div class="col-lg-6 col-sm-12 col-md-5 row justify-content-center m-auto">
-                    <p class="fw-normal text-start w-75 text-sm-center text-md-center text-lg-start"><i class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit
+                    <p class="fw-normal text-start w-75 text-sm-center text-md-center text-lg-start"><i
+                            class="fa-solid fa-location-dot"></i> Lorem ipsum dolor sit
                         amet consectetur adipisicing elit. Vero soluta, nostrum corporis quibusdam accusantium ea ex
                         facilis ullam ipsa dignissimos doloremque asperiores provident quod cum fugit velit! Vel,
                         distinctio adipisci?</p>
@@ -496,8 +514,9 @@
     </div>
     <script src="assets/jquery.min.js"></script>
     <script src="assets/lib/easing/easing.min.js"></script>
+    <!-- <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
     <script src="assets/script.js"></script>
-    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script>
         let mapIndex = L.map('mapIndex').setView([-7.666180528826785, 109.64169625691922], 13);
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -506,6 +525,7 @@
         let marker = L.marker([-7.666180528826785, 109.64169625691922]).addTo(mapIndex)
         marker.bindPopup("Seblak Bombom 🔥").openPopup();
         let latlng = L.latLng()
+
     </script>
 </body>
 

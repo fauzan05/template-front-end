@@ -302,20 +302,28 @@ if (deliveryLabel && takeAwayLabel) {
     })
 }
 
+// Inisialisasi semua popover
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map(
+  popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+);
+
+// Fungsi untuk menutup semua popover
+function closeAllPopovers() {
+  popoverList.forEach(popover => popover.hide());
+}
+
+// Event listener untuk mendeteksi klik di luar popover
+document.addEventListener('click', function (event) {
+  const isPopoverTrigger = event.target.closest('[data-bs-toggle="popover"]');
+  if (!isPopoverTrigger) {
+    closeAllPopovers(); // Tutup semua popover jika bukan elemen pemicu
+  }
+});
+
 const copyButtons = document.getElementsByClassName("fa-copy")
 const discountCode = document.getElementsByClassName("discount-code")
-const copyCodeSuccessInfos = document.getElementsByClassName("copy-code-success-info")
-if (copyButtons && discountCode) {
-    Array.from(copyButtons).forEach((copyButton, index) => {
-        copyButton.addEventListener("click",() => {
-            navigator.clipboard.writeText(discountCode[index].innerText)
-            copyCodeSuccessInfos[index].classList.remove("d-none")
-        })
-    })
-}
    
-
-
 
 $(document).ready(function() {
 
