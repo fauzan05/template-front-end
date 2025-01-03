@@ -345,3 +345,21 @@ $(document).ready(function() {
     
 });
 
+$('#dark-mode').click(function() {
+    $(this).fadeOut(200, function() {
+        // Mengubah teks setelah fadeOut selesai
+        var currentText = $(this).text();
+        if (currentText === 'dark_mode') {
+            $('html').attr('data-bs-theme', 'light');
+            $(this).text('light_mode');
+            $('nav').find('*').not('input').not('.chili-logo').addClass('text-light');
+        } else {
+            $('html').attr('data-bs-theme', 'dark');
+            $(this).text('dark_mode');
+        }
+        $(this).fadeIn(200); // FadeIn kembali
+    });
+});
+
+
+

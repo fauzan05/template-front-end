@@ -221,7 +221,6 @@ select:focus{
 
 .hero-header {
     position: relative; /* Pastikan posisi relatif */
-    overflow: hidden; /* Pastikan overflow tersembunyi untuk gambar */
 }
 
 .hero-header::before {
@@ -238,6 +237,10 @@ select:focus{
     z-index: -1; /* Pastikan gambar berada di bawah elemen lain */
 }
 
+.dropdown-menu{
+    z-index: 99999999999 !important;
+}
+
 .search-form-collapse{
     display: none;
 }
@@ -245,14 +248,14 @@ select:focus{
 .search-form{
     display: flex;
     align-items: center;
-    color: white;
+    color: auto;
     border-radius: 5px;
-    border: 1px solid white;
-    outline: none;
+    /* border: 1px solid white; */
+    /* outline: none; */
     width: 200px;
     height: 30px;
     box-sizing: border-box;
-    background-color: rgba(69,69,69,255);
+    /* background-color: rgba(69,69,69,255); */
 }
 
 .dropdown-menu.show {
@@ -1032,4 +1035,13 @@ input[type="password"]:focus{
     .navbar{
         border-bottom: 1px solid rgba(69,69,69,255);
     }
+}
+
+.dropdown-menu {
+    background-color: #343a40; /* Set warna background dark */
+}
+
+.dropdown-menu a.dropdown-item:hover {
+    background-color: #343a40 !important; /* Pastikan warna background tetap gelap saat hover */
+    color: white; /* Set warna teks agar terlihat jelas */
 }

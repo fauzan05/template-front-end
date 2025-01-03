@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -25,7 +26,7 @@
             <a href="" class="navbar-brand mt-3 text-decoration-none">
                 <h1 class="m-0 title-name-app text-white">
                     Seblak Bombom
-                    <i class="fa-solid fa-pepper-hot ms-2 text-danger"></i>
+                    <i class="fa-solid fa-pepper-hot ms-2 text-danger chili-logo"></i>
                 </h1>
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" type="button">
@@ -38,8 +39,10 @@
                     <a href="" class="nav-item nav-link">Layanan</a>
                     <a href="" class="nav-item nav-link">Tentang</a>
                     <div class="dropdown mt-2 mx-3">
-                        <i class="fa-solid fa-magnifying-glass cursor-pointer" id="searchIcon" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                        <ul class="dropdown-menu dropdown-menu-end border p-0" id="searchDropdown" style="z-index: 99999 !important;">
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer" id="searchIcon" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end border p-0" id="searchDropdown"
+                            style="z-index: 99999 !important;">
                             <li>
                                 <input class="search-form border border-danger" type="text" placeholder="Cari...">
                             </li>
@@ -47,7 +50,8 @@
                     </div>
                     <div class="dropdown mt-2 mx-3">
                         <i class="fa-solid fa-bell cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                        <ul class="dropdown-menu dropdown-menu-end notification-menu p-3" style="z-index: 99999 !important;">
+                        <ul class="dropdown-menu dropdown-menu-end notification-menu p-3"
+                            style="z-index: 99999 !important;">
                             <li>
                                 <div class="cart-header d-flex justify-content-start align-items-center">
                                     <h5 class="fw-light">Notifikasi</h5>
@@ -68,28 +72,37 @@
                                     <span class="fw-light border border-danger rounded p-2">Menunggu Pembayaran</span>
                                 </div>
                                 <div class="row mt-3 justify-content-around p-3">
-                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
                                         <i class="fa-solid fa-clock text-danger"></i>
-                                        <span class="fw-light text-center" style="font-size: smaller;">Menunggu Konfirmasi</span>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Menunggu
+                                            Konfirmasi</span>
                                     </div>
-                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
                                         <i class="fa-solid fa-fire-burner text-danger"></i>
-                                        <span class="fw-light text-center" style="font-size: smaller;">Pesanan Diproses</span>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Pesanan
+                                            Diproses</span>
                                     </div>
-                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
                                         <i class="fa-solid fa-motorcycle text-danger"></i>
-                                        <span class="fw-light text-center" style="font-size: smaller;">Sedang Dikirim</span>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sedang
+                                            Dikirim</span>
                                     </div>
-                                    <div class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
                                         <i class="fa-solid fa-location-dot text-danger"></i>
-                                        <span class="fw-light text-center" style="font-size: smaller;">Sampai Tujuan</span>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sampai
+                                            Tujuan</span>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="dropdown mt-2 mx-3">
-                        <i class="fa-solid fa-cart-shopping cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <i class="fa-solid fa-cart-shopping cursor-pointer" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
                         <ul class="dropdown-menu dropdown-menu-end cart-menu p-3" style="z-index: 99999 !important;">
                             <li>
                                 <div class="cart-header d-flex justify-content-between align-items-center">
@@ -99,7 +112,8 @@
                             </li>
                             <div class="cart-items-wrapper">
                                 <li class="cart-item d-flex align-items-center mb-2">
-                                    <img src="assets/image/seblak-ceker.jpeg" class="cart-image rounded" alt="Item Image">
+                                    <img src="assets/image/seblak-ceker.jpeg" class="cart-image rounded"
+                                        alt="Item Image">
                                     <div class="cart-item-details ms-2">
                                         <p class="mb-0 fw-bold cursor-pointer">Mesin penetas telur otomatis</p>
                                         <small class="fw-light">PAKING KAYU BOX</small>
@@ -110,7 +124,8 @@
                                     </div>
                                 </li>
                                 <li class="cart-item d-flex align-items-center mb-2">
-                                    <img src="assets/image/seblak-foto-1.png" class="cart-image rounded" alt="Item Image">
+                                    <img src="assets/image/seblak-foto-1.png" class="cart-image rounded"
+                                        alt="Item Image">
                                     <div class="cart-item-details ms-2">
                                         <p class="mb-0 fw-bold cursor-pointer">GUNINCO SUKULEN Tanaman</p>
                                         <small class="fw-light">NO 2</small>
@@ -120,7 +135,8 @@
                                     </div>
                                 </li>
                                 <li class="cart-item d-flex align-items-center mb-2">
-                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded" alt="Item Image">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded"
+                                        alt="Item Image">
                                     <div class="cart-item-details ms-2">
                                         <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
                                         <small class="fw-light">Dodge Black</small>
@@ -131,7 +147,8 @@
                                     </div>
                                 </li>
                                 <li class="cart-item d-flex align-items-center mb-2">
-                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded" alt="Item Image">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded"
+                                        alt="Item Image">
                                     <div class="cart-item-details ms-2">
                                         <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
                                         <small class="fw-light">Dodge Black</small>
@@ -144,12 +161,15 @@
                             </div>
                         </ul>
                     </div>
+                    <span class="material-symbols-outlined cursor-pointer" id="dark-mode" style="margin-top: 6px;">
+                        dark_mode
+                    </span>
                     <div class="dropdown mt-2 mx-3">
                         <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-user cursor-pointer"></i>
-                            <span class="fw-normal">John Doe</span>
+                            <span class="fw-normal navbar-group-icon">John Doe</span>
                         </div>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul class="dropdown-menu dropdown-menu-end bg-dark">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
@@ -525,7 +545,6 @@
         let marker = L.marker([-7.666180528826785, 109.64169625691922]).addTo(mapIndex)
         marker.bindPopup("Seblak Bombom 🔥").openPopup();
         let latlng = L.latLng()
-
     </script>
 </body>
 

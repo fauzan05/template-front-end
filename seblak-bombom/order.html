@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="assets/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <link rel="stylesheet" href="assets/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="assets/leaflet-locatecontrol-gh-pages/dist/L.Control.Locate.min.js"></script>
@@ -23,9 +24,9 @@
 
 <body>
     <div class="container-xxl hero-header position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 px-lg-5 py-lg-2">
             <a href="" class="navbar-brand mt-3 text-decoration-none">
-                <h1 class="title-name-app text-white">
+                <h1 class="m-0 title-name-app text-white">
                     Seblak Bombom
                     <i class="fa-solid fa-pepper-hot ms-2 text-danger"></i>
                 </h1>
@@ -39,103 +40,141 @@
                     <a href="" class="nav-item nav-link">Menu</a>
                     <a href="" class="nav-item nav-link">Layanan</a>
                     <a href="" class="nav-item nav-link">Tentang</a>
-                    <div class="nav-item nav-link" id="searchForm"><i
-                            class="fa-solid fa-magnifying-glass cursor-pointer">
-                            <div class="search-form-wrapper cursor-pointer">
-                                <input class="search-form p-2" type="text" placeholder="Cari...">
-                            </div>
-                        </i>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-magnifying-glass cursor-pointer" id="searchIcon" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end border p-0" id="searchDropdown"
+                            style="z-index: 99999 !important;">
+                            <li>
+                                <input class="search-form border border-danger" type="text" placeholder="Cari...">
+                            </li>
+                        </ul>
                     </div>
-                    <div class="nav-item nav-link" id="notification"><i class="fa-solid fa-bell cursor-pointer"></i><a
-                            href="" class="text-decoration-none notification-text-collapse">Notifikasi</a>
-                        <span class="badge">5</span>
-                        <div class="notification-wrapper">
-                            <p class="text-start text-capitalize p-1">Notifikasi</p>
-                            <div class="notification-wrapper-inside">
-                                <a href="" class="notification cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <i class="fa-solid fa-motorcycle"></i>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="text-transform-none">Lorem Ipsum</p>
-                                            <p class="text-transform-none fs-smaller fw-lighter truncate text-justify">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
-                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
-                                                cupiditate dicta recusandae autem?</p>
-                                            <p class="text-transform-none fs-smaller fw-lighter text-danger">5 Menit
-                                                yang lalu</p>
-                                        </div>
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <span class="dot"></span>
-                                        </div>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-bell cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end notification-menu p-3"
+                            style="z-index: 99999 !important;">
+                            <li>
+                                <div class="cart-header d-flex justify-content-start align-items-center">
+                                    <h5 class="fw-light">Notifikasi</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex justify-content-between mt-2 px-3 g-0 m-0">
+                                    <div class="text-center cursor-pointer red-underline">Transaksi</div>
+                                    <div class="text-center cursor-pointer p-0 g-0">Update</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex align-items-center justify-content-between mt-3 w-100">
+                                    <span class="fw-normal">Pembelian</span>
+                                    <span class="fw-light text-danger">Lihat Semua</span>
+                                </div>
+                                <div class="my-3 text-center">
+                                    <span class="fw-light border border-danger rounded p-2">Menunggu Pembayaran</span>
+                                </div>
+                                <div class="row mt-3 justify-content-around p-3">
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-clock text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Menunggu
+                                            Konfirmasi</span>
                                     </div>
-                                </a>
-                                <a href="" class="notification cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <i class="fa-solid fa-motorcycle"></i>
-                                        </div>
-                                        <div class="col-8">
-                                            <p class="text-transform-none">Lorem Ipsum</p>
-                                            <p class="text-transform-none fs-smaller fw-lighter truncate text-justify">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                                                expedita molestias ut odit. Voluptate eum voluptates necessitatibus
-                                                autem asperiores, impedit aperiam vitae odio iure. Numquam dignissimos
-                                                cupiditate dicta recusandae autem?</p>
-                                            <p class="text-transform-none fs-smaller fw-lighter text-danger">5 Menit
-                                                yang lalu</p>
-                                        </div>
-                                        <div class="col-2 d-flex flex-column align-items-center justify-content-center">
-                                            <span class="dot"></span>
-                                        </div>
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-fire-burner text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Pesanan
+                                            Diproses</span>
                                     </div>
-                                </a>
-                            </div>
-                            <a href="" class="see-notification-all text-decoration-none">
-                                <p class="text-center text-capitalize p-1">Lihat Semua</p>
-                            </a>
-                        </div>
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-motorcycle text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sedang
+                                            Dikirim</span>
+                                    </div>
+                                    <div
+                                        class="col-2 d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                        <i class="fa-solid fa-location-dot text-danger"></i>
+                                        <span class="fw-light text-center" style="font-size: smaller;">Sampai
+                                            Tujuan</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div href="" class="nav-item nav-link" id="cart"><i
-                            class="fa-solid fa-cart-shopping cursor-pointer"></i><a href=""
-                            class="cart-text-collapse text-decoration-none">Keranjang</a><span class="badge">5</span>
-                        <div class="cart-wrapper">
-                            <div class="d-flex justify-content-between">
-                                <p class="text-start text-capitalize p-1">Keranjang</p>
-                                <a href=""
-                                    class="text-start text-decoration-none fw-light text-danger text-capitalize p-1 cursor-pointer">Lihat
-                                    Semua</a>
-                            </div>
-                            <div class="cart-wrapper-inside">
-                                <a href="" class="cart-item cursor-pointer text-decoration-none">
-                                    <div class="row gap-0 g-0 m-0 w-auto d-flex justify-content-between h-100">
-                                        <div class="col-3 d-flex flex-column align-items-center justify-content-center">
-                                            <img src="assets/image/seblak-ceker.jpeg" alt=""
-                                                class="image-cart-size rounded">
-                                        </div>
-                                        <div class="col-4 d-flex flex-column justify-content-center">
-                                            <p class="text-transform-none p-2 fs-6 fw-bolder truncate">Seblak Ceker</p>
-                                        </div>
-                                        <div class="col-5 d-flex flex-column align-items-center justify-content-center">
-                                            <h6 class="text-transform-none">2 x Rp 15000</h6>
-                                        </div>
+                    <div class="dropdown mt-2 mx-3">
+                        <i class="fa-solid fa-cart-shopping cursor-pointer" data-bs-toggle="dropdown"
+                            aria-expanded="false"></i>
+                        <ul class="dropdown-menu dropdown-menu-end cart-menu p-3" style="z-index: 99999 !important;">
+                            <li>
+                                <div class="cart-header d-flex justify-content-between align-items-center">
+                                    <h5 class="fw-light">Keranjang (10)</h5>
+                                    <a href="#" class="text-danger">Lihat semua</a>
+                                </div>
+                            </li>
+                            <div class="cart-items-wrapper">
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-ceker.jpeg" class="cart-image rounded"
+                                        alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">Mesin penetas telur otomatis</p>
+                                        <small class="fw-light">PAKING KAYU BOX</small>
                                     </div>
-                                </a>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp410.000</p>
+                                        <small class="text-decoration-line-through">Rp550.000</small>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-foto-1.png" class="cart-image rounded"
+                                        alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">GUNINCO SUKULEN Tanaman</p>
+                                        <small class="fw-light">NO 2</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp15.200</p>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded"
+                                        alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
+                                        <small class="fw-light">Dodge Black</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp125.000</p>
+                                        <small class="text-decoration-line-through">Rp250.000</small>
+                                    </div>
+                                </li>
+                                <li class="cart-item d-flex align-items-center mb-2">
+                                    <img src="assets/image/seblak-komplit.png" class="cart-image rounded"
+                                        alt="Item Image">
+                                    <div class="cart-item-details ms-2">
+                                        <p class="mb-0 fw-bold cursor-pointer">TWH Fast Furious DODGE Car</p>
+                                        <small class="fw-light">Dodge Black</small>
+                                    </div>
+                                    <div class="ms-auto text-end">
+                                        <p class="mb-0 fw-bold">1 x Rp125.000</p>
+                                        <small class="text-decoration-line-through">Rp250.000</small>
+                                    </div>
+                                </li>
                             </div>
-                        </div>
+                        </ul>
                     </div>
-                    <div href="" class="nav-item nav-link cursor-pointer" id="user"><i class="fa-solid fa-user"></i>
-                        <p class="ms-1 text-ellipsis text-transform-none fw-bolder" style="max-width: 70px;">John Doe
-                        </p>
-                        <div
-                            class="user-wrapper d-flex flex-column align-items-center text-center justify-content-center">
-                            <a href="" class="text-decoration-none text-transform-none user-list my-1">Masuk</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Daftar</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Akun</a>
-                            <a href="" class="text-decoration-none text-transform-none user-list m-1">Pesanan</a>
+                    <span class="material-symbols-outlined cursor-pointer" id="dark-mode" style="margin-top: 6px;">
+                        dark_mode
+                    </span>
+                    <div class="dropdown mt-2 mx-3">
+                        <div type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user cursor-pointer"></i>
+                            <span class="fw-normal navbar-group-icon">John Doe</span>
                         </div>
+                        <ul class="dropdown-menu dropdown-menu-end bg-dark">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
                     </div>
                     <div class="search-form-collapse cursor-pointer mb-3">
                         <form action="">
@@ -147,154 +186,156 @@
             </div>
         </nav>
     </div>
-    <div class="container-xxl py-3">
-        <div class="container d-flex flex-column align-items-center justify-content-between my-5">
-            <div class="row d-flex align-items-start justify-content-between w-100">
-                <div class="col-8">
-                    <div
-                        class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
-                        <h2 class="text-danger p-3 red-underline">Checkout</h2>
-                        <div class="col-2 d-flex align-items-center justify-content-center w-100 my-3">
-                            <img src="assets/image/shopping-cart.png" class="shopping-cart-img" alt="">
-                            <p class="text-center">Ini adalah halaman terakhir dari proses belanjamu. Pastikan semua
-                                sudah benar, ya. :)</p>
-                        </div>
-                        <div class="col-11 mt-2">
-                            <h5>Pesanan Kamu</h5>
-                        </div>
-                        <div class="col-11 border rounded-sm my-2">
-                            <div class="row">
-                                <div class="col-2 d-flex align-items-center">
-                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
-                                        alt="">
-                                </div>
-                                <div class="col-6 border-end">
-                                    <h5 class="m-3">Seblak Spesial</h5>
-                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
-                                </div>
-                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <div class="quantity-wrapper border mb-2 mt-2">
-                                        <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
-                                        <input class="w-10 text-center quantity" type="text" value="1">
-                                        <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
-                                    </div>
+    <div class="container d-flex flex-column align-items-center justify-content-between my-5">
+        <div class="row d-flex align-items-start justify-content-between w-100">
+            <div class="col-8">
+                <div
+                    class="row d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
+                    <h2 class="text-danger p-3 red-underline">Checkout</h2>
+                    <div class="col-2 d-flex align-items-center justify-content-center w-100 my-3">
+                        <img src="assets/image/shopping-cart.png" class="shopping-cart-img" alt="">
+                        <p class="text-center">Ini adalah halaman terakhir dari proses belanjamu. Pastikan semua
+                            sudah benar, ya. :)</p>
+                    </div>
+                    <div class="col-11 mt-2">
+                        <h5>Pesanan Kamu</h5>
+                    </div>
+                    <div class="col-11 border rounded-sm my-2">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
+                                    alt="">
+                            </div>
+                            <div class="col-6 border-end">
+                                <h5 class="m-3">Seblak Spesial</h5>
+                                <h5 class="m-3 fw-bold">Rp 15.000</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                <div class="quantity-wrapper border mb-2 mt-2">
+                                    <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                                    <input class="w-10 text-center quantity" type="text" value="1">
+                                    <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-11 border rounded-sm my-2">
-                            <div class="row">
-                                <div class="col-2 d-flex align-items-center">
-                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
-                                        alt="">
-                                </div>
-                                <div class="col-6 border-end">
-                                    <h5 class="m-3">Seblak Spesial</h5>
-                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
-                                </div>
-                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <div class="quantity-wrapper border mb-2 mt-2">
-                                        <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
-                                        <input class="w-10 text-center quantity" type="text" value="1">
-                                        <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
-                                    </div>
+                    </div>
+                    <div class="col-11 border rounded-sm my-2">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
+                                    alt="">
+                            </div>
+                            <div class="col-6 border-end">
+                                <h5 class="m-3">Seblak Spesial</h5>
+                                <h5 class="m-3 fw-bold">Rp 15.000</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                <div class="quantity-wrapper border mb-2 mt-2">
+                                    <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                                    <input class="w-10 text-center quantity" type="text" value="1">
+                                    <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-11 border rounded-sm my-2">
-                            <div class="row">
-                                <div class="col-2 d-flex align-items-center">
-                                    <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
-                                        alt="">
-                                </div>
-                                <div class="col-6 border-end">
-                                    <h5 class="m-3">Seblak Spesial</h5>
-                                    <h5 class="m-3 fw-bold">Rp 15.000</h5>
-                                </div>
-                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <div class="quantity-wrapper border mb-2 mt-2">
-                                        <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
-                                        <input class="w-10 text-center quantity" type="text" value="1">
-                                        <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
-                                    </div>
+                    </div>
+                    <div class="col-11 border rounded-sm my-2">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <img src="assets/image/seblak-spesial.png" class="rounded-sm image-product-checkout"
+                                    alt="">
+                            </div>
+                            <div class="col-6 border-end">
+                                <h5 class="m-3">Seblak Spesial</h5>
+                                <h5 class="m-3 fw-bold">Rp 15.000</h5>
+                            </div>
+                            <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                <div class="quantity-wrapper border mb-2 mt-2">
+                                    <i class="fa-solid fa-minus minus-button text-danger me-2 cursor-pointer"></i>
+                                    <input class="w-10 text-center quantity" type="text" value="1">
+                                    <i class="fa-solid fa-plus plus-button text-danger ms-2 cursor-pointer"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-11 my-2">
-                            <span id="add-note" class="text-danger cursor-pointer">Tambah Catatan</span>
-                            <div class="mb-3 d-none" id="add-note-input">
-                                <label for="exampleFormControlTextarea1" class="form-label">Tulis Catatan Untuk
-                                    Pesananmu</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
+                    </div>
+                    <div class="col-11 my-2">
+                        <span id="add-note" class="text-danger cursor-pointer">Tambah Catatan</span>
+                        <div class="mb-3 d-none" id="add-note-input">
+                            <label for="exampleFormControlTextarea1" class="form-label">Tulis Catatan Untuk
+                                Pesananmu</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                        <hr class="border border-5 my-3">
-                        <div class="col-11">
-                            <h5>Pengiriman</h5>
-                            <div class="delivery-option-wrapper my-4">
-                                <input type="radio" name="isDelivery" class="delivery-option" id="delivery">
-                                <label for="delivery" class="delivery-label" id="deliveryLabel">Diantar</label>
-                                <input type="radio" name="isDelivery" class="delivery-option" id="takeAway">
-                                <label for="takeAway" class="take-away-label" id="takeAwayLabel">Ambil Sendiri</label>
-                            </div>
-                            <div id="showCurrentLocation" class="d-flex flex-column align-items-start justify-content-center">
-                                <h5 class="py-3">Gunakan Lokasi Terkini</h5>
-                                <div class="col-lg-6 col-sm-12 rounded" id="mapOrder"></div>
-                                <button id="getLonLat" class="btn w-75 btn-danger align-self-center my-4">Dapatkan
-                                    Informasi Jarak</button>
-                                <div class="border border-danger rounded-sm w-100 d-flex mb-4">
-                                    <div class="p-3 d-flex flex-column col-6">
-                                        <p class="fw-normal my-1">Longitude : <span id="showLongitude" class="fw-normal">-</span></p>
-                                        <p class="fw-normal my-1">Latitude : <span id="showLatitude" class="fw-normal">-</span></p>
-                                    </div>
-                                    <div class="p-3 d-flex col-6 d-flex flex-column">
-                                        <p class="fw-normal my-1">Jarak : <span id="showDistance" class="fw-normal">0</span> Kilometer</p>
-                                        <p class="fw-normal my-1">Total Ongkir : Rp <span id="showOngkir" class="fw-normal">0</span></p>
-                                    </div>
+                    </div>
+                    <hr class="border border-5 my-3">
+                    <div class="col-11">
+                        <h5>Pengiriman</h5>
+                        <div class="delivery-option-wrapper my-4">
+                            <input type="radio" name="isDelivery" class="delivery-option" id="delivery">
+                            <label for="delivery" class="delivery-label" id="deliveryLabel">Diantar</label>
+                            <input type="radio" name="isDelivery" class="delivery-option" id="takeAway">
+                            <label for="takeAway" class="take-away-label" id="takeAwayLabel">Ambil Sendiri</label>
+                        </div>
+                        <div id="showCurrentLocation"
+                            class="d-flex flex-column align-items-start justify-content-center">
+                            <h5 class="py-3">Gunakan Lokasi Terkini</h5>
+                            <div class="col-lg-6 col-sm-12 rounded" id="mapOrder"></div>
+                            <button id="getLonLat" class="btn w-75 btn-danger align-self-center my-4">Dapatkan
+                                Informasi Jarak</button>
+                            <div class="border border-danger rounded-sm w-100 d-flex mb-4">
+                                <div class="p-3 d-flex flex-column col-6">
+                                    <p class="fw-normal my-1">Longitude : <span id="showLongitude"
+                                            class="fw-normal">-</span></p>
+                                    <p class="fw-normal my-1">Latitude : <span id="showLatitude"
+                                            class="fw-normal">-</span></p>
+                                </div>
+                                <div class="p-3 d-flex col-6 d-flex flex-column">
+                                    <p class="fw-normal my-1">Jarak : <span id="showDistance" class="fw-normal">0</span>
+                                        Kilometer</p>
+                                    <p class="fw-normal my-1">Total Ongkir : Rp <span id="showOngkir"
+                                            class="fw-normal">0</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-4 g-0 position-sticky"
-                    style="top: 20px" >
-                    <div
-                        class="row g-0 d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
-                        <button
-                            class="col-11 discount-option border rounded-sm my-3 d-flex flex-column align-items-center justify-content-center bg-white"
-                            data-bs-toggle="modal" data-bs-target="#setDiscountModal">
-                            <h6 class="fw-bolder m-0"> <i class="fa-solid fa-percent text-danger me-2"></i> Makin hemat
-                                pakai promo <div class="d-none spinner-border spinner-border-sm text-danger"
-                                    role="status"></span>
-                                </div>
-                            </h6>
-                        </button>
-                        <hr class="border border-5 mt-1 mb-3">
-                        <div class="col-11 d-flex flex-column align-items-start justify-content-start">
-                            <h5 class="mb-3">Ringkasan Belanja</h5>
-                            <h6 class="mb-1">Total Belanja</h6>
-                            <div class="d-flex align-items-center justify-content-between w-100">
-                                <p class="fw-light m-0">Total Harga (1 Barang)</p>
-                                <p class="fw-light m-0">Rp 15.000</p>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between w-100">
-                                <p class="fw-light m-0">Total Ongkir</p>
-                                <p class="fw-light m-0">Rp 5.000</p>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-between w-100">
-                                <p class="fw-light m-0">Total Potongan Diskon</p>
-                                <p class="fw-light m-0">Rp 10.000</p>
-                            </div>
-                            <hr class="w-100">
-                            <div class="d-flex align-items-center justify-content-between w-100">
-                                <h6>Total Tagihan</h6>
-                                <h6>Rp 50.000</h6>
-                            </div>
-                            <hr class="w-100">
-                            <button class="btn btn-success w-100 mb-3"><i class="fa-solid fa-wallet"></i> Bayar Di
-                                Tempat</button>
-                            <button class="btn btn-primary w-100 mb-3"><i class="fa-solid fa-globe"></i> Bayar Via
-                                Online</button>
+            </div>
+            <div class="col-4 g-0 position-sticky" style="top: 20px">
+                <div
+                    class="row g-0 d-flex flex-column align-items-center justify-content-center w-100 border rounded-sm shadow-sm">
+                    <button
+                        class="col-11 discount-option border rounded-sm my-3 d-flex align-items-center justify-content-center bg-white"
+                        data-bs-toggle="modal" data-bs-target="#setDiscountModal">
+                        <i class="fa-solid fa-percent text-danger me-2"></i> <span
+                            class="text-danger fw-normal mt-1">Makin hemat
+                            pakai promo</span>
+                        <div class="d-none spinner-border spinner-border-sm text-danger" role="status"></span>
                         </div>
+                    </button>
+                    <hr class="border border-5 mt-1 mb-3">
+                    <div class="col-11 d-flex flex-column align-items-start justify-content-start">
+                        <h5 class="mb-3">Ringkasan Belanja</h5>
+                        <h6 class="mb-1">Total Belanja</h6>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p class="fw-light m-0">Total Harga (1 Barang)</p>
+                            <p class="fw-light m-0">Rp 15.000</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p class="fw-light m-0">Total Ongkir</p>
+                            <p class="fw-light m-0">Rp 5.000</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p class="fw-light m-0">Total Potongan Diskon</p>
+                            <p class="fw-light m-0">Rp 10.000</p>
+                        </div>
+                        <hr class="w-100">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <h6>Total Tagihan</h6>
+                            <h6>Rp 50.000</h6>
+                        </div>
+                        <hr class="w-100">
+                        <button class="btn btn-success w-100 mb-3"><i class="fa-solid fa-wallet"></i> Bayar Di
+                            Tempat</button>
+                        <button class="btn btn-primary w-100 mb-3"><i class="fa-solid fa-globe"></i> Bayar Via
+                            Online</button>
                     </div>
                 </div>
             </div>
@@ -321,10 +362,13 @@
                 <div class="modal-body-discount-wrapper mb-4">
                     <div class="modal-body-discount">
                         <div class="col-11 border rounded-sm my-2">
-                            <h5 class="fw-bolder p-3">Diskon Sebelas Sebelas</h5>
-                            <h5 class="ms-3">Kode : <span class="text-danger discount-code">SEBLAK01#</span> <i
-                                    class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil disalin!</span></h5>
-                            <p class="mx-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            <h5 class="fw-normal p-3">Diskon Sebelas Sebelas</h5>
+                            <h5 class="ms-3">Kode : <span class="text-danger discount-code fw-normal">SEBLAK01#</span>
+                                <i class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span
+                                    class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil
+                                    disalin!</span></h5>
+                            <p class="mx-3 text-justify fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
                                 Consequuntur ipsa reiciendis aliquid quasi distinctio ut illum debitis asperiores rerum.
                                 Repellendus impedit consequuntur itaque odit laudantium expedita deserunt temporibus
                                 soluta numquam.</p>
@@ -332,10 +376,13 @@
                     </div>
                     <div class="modal-body-discount">
                         <div class="col-11 border rounded-sm my-2">
-                            <h5 class="fw-bolder p-3">Diskon Sebelas Sebelas</h5>
-                            <h5 class="ms-3">Kode : <span class="text-danger discount-code">SEBLAK01#</span> <i
-                                class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil disalin!</span></h5>
-                            <p class="mx-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            <h5 class="fw-normal p-3">Diskon Sebelas Sebelas</h5>
+                            <h5 class="ms-3">Kode : <span class="text-danger discount-code fw-normal">SEBLAK01#</span>
+                                <i class="ms-3 mb-3 fa-solid fa-copy cursor-pointer"></i><span
+                                    class="ms-3 d-none fw-normal text-danger fs-12 copy-code-success-info">Kode berhasil
+                                    disalin!</span></h5>
+                            <p class="mx-3 text-justify fw-normal">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit.
                                 Consequuntur ipsa reiciendis aliquid quasi distinctio ut illum debitis asperiores rerum.
                                 Repellendus impedit consequuntur itaque odit laudantium expedita deserunt temporibus
                                 soluta numquam.</p>
@@ -405,8 +452,14 @@
             </div>
         </div>
     </div>
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/jquery.min.js"></script>
     <script src="assets/script.js"></script>
-    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script>
+        $('.material-symbols-outlined').click(function (item) {
+
+        });
+    </script>
 </body>
 
 </html>
